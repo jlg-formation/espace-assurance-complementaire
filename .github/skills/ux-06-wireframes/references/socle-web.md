@@ -38,7 +38,7 @@ Puis :
 web/
 ├── index.html, vite.config.ts, package.json, tsconfig*.json
 ├── scripts/                     tokens.ts, contrastes.ts (ux-07)
-├── tests/                       wireframes.test.tsx (ux-06), design-system.test.tsx (ux-07)
+├── tests/                       wireframes.test.tsx (ux-06), design-system.test.tsx (ux-07), prototypes.test.tsx (ux-08)
 └── src/
     ├── main.tsx                 routeur (HashRouter : fonctionne sur tout hébergement statique)
     ├── sections.tsx             une entrée par section : wireframes, design system, prototypes
@@ -55,13 +55,13 @@ web/
     │   ├── ecrans/NN-<zone>/ECNN-<ecran>.tsx
     │   ├── registre.ts, routes.tsx, Galerie.tsx, PageWireframe.tsx
     ├── design-system/           ux-07
-    └── prototypes/              ux-08
+    └── prototypes/              ux-08 : donnees/, ecrans/, registre.ts ; /prototypes (revue) et /test (mode test)
 ```
 
 ## Fichiers : copie conforme ou projet
 | Fichier | Statut |
 |---|---|
-| `src/main.tsx`, `src/Accueil.tsx`, `src/projet/navigation.ts`, `src/projet/ui.ts`, `src/wireframes/kit/*`, `src/wireframes/Galerie.tsx`, `src/wireframes/PageWireframe.tsx`, `src/wireframes/routes.tsx`, `tests/wireframes.test.tsx` | **Copie conforme** de l'asset : ne pas modifier dans `web/`. Un besoin nouveau se traite dans le skill, puis la copie est refaite. |
+| `src/main.tsx`, `src/Accueil.tsx`, `src/projet/navigation.ts`, `src/projet/ui.ts`, `src/wireframes/kit/*`, `src/wireframes/Galerie.tsx`, `src/wireframes/PageWireframe.tsx`, `src/wireframes/routes.tsx`, `tests/wireframes.test.tsx` ; pour ux-07 et ux-08, les fichiers que leur skill désigne ainsi | **Copie conforme** de l'asset : ne pas modifier dans `web/`. Un besoin nouveau se traite dans le skill, puis la copie est refaite. |
 | `src/projet/projet.ts`, `ecrans.ts`, `zones.ts`, `parcours.ts`, `src/wireframes/registre.ts`, `src/wireframes/ecrans/**`, `src/sections.tsx` | **Projet** : le modèle fournit des valeurs d'exemple, à remplacer. |
 
 ## Commandes

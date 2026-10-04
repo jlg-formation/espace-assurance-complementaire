@@ -73,14 +73,20 @@ body { margin: 0; }
 .wf-ariane ol { list-style: none; margin: 0; padding: .5rem 1rem; display: flex; flex-wrap: wrap; gap: .25rem; font-size: .875rem; }
 .wf-ariane li + li::before { content: "›"; margin-right: .25rem; }
 
-@media (max-width: 767.98px) {
-  .wf-nav-globale--onglets {
-    position: fixed; left: 0; right: 0; bottom: 0; z-index: 5;
-    background: var(--wf-blanc); border-top: 2px solid var(--wf-noir);
-  }
-  .wf-nav-globale--onglets ul { justify-content: space-around; }
-  .wf-nav-globale--onglets a { flex-direction: column; justify-content: center; padding: .25rem; font-size: .8rem; text-align: center; }
-  .wf-racine:has(.wf-nav-globale--onglets) { padding-bottom: 4.5rem; }
+/* Mobile d'abord : barre d'onglets fixée en bas, remise dans le flux à partir de 768 px. */
+.wf-nav-globale--onglets {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 5;
+  background: var(--wf-blanc); border-top: 2px solid var(--wf-noir);
+}
+.wf-nav-globale--onglets ul { justify-content: space-around; }
+.wf-nav-globale--onglets a { flex-direction: column; justify-content: center; padding: .25rem; font-size: .8rem; text-align: center; }
+.wf-racine:has(.wf-nav-globale--onglets) { padding-bottom: 4.5rem; }
+
+@media (min-width: 768px) {
+  .wf-nav-globale--onglets { position: static; border-top: 0; }
+  .wf-nav-globale--onglets ul { justify-content: flex-start; }
+  .wf-nav-globale--onglets a { flex-direction: row; padding: 0 .75rem; font-size: inherit; text-align: left; }
+  .wf-racine:has(.wf-nav-globale--onglets) { padding-bottom: 0; }
 }
 
 /* Mise en page */
@@ -177,8 +183,11 @@ a.wf-carte:hover { background: var(--wf-fond); }
 .wf-note::after { content: attr(data-note); }
 
 /* Visibilité selon l'appareil */
-@media (min-width: 768px) { .wf-mobile { display: none !important; } }
-@media (max-width: 767.98px) { .wf-ordinateur { display: none !important; } }
+.wf-ordinateur { display: none; }
+@media (min-width: 768px) {
+  .wf-mobile { display: none; }
+  .wf-ordinateur { display: block; }
+}
 
 /* Galerie */
 .wf-apercus { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }

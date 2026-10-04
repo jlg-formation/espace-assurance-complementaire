@@ -21,6 +21,8 @@ Concevoir d'abord pour la plus petite largeur (375 px), puis élargir (1280 px).
 
 Si l'appareil principal du persona est l'ordinateur, le dire dans la fiche, mais garder une version mobile lisible.
 
+Le kit applique la même règle : ses styles de base valent pour le mobile, et ses requêtes média n'utilisent que `min-width` (768 px, 1024 px) pour enrichir la mise en page sur des écrans plus larges. `bun test` refuse toute requête `max-width` dans `wireframe.css`.
+
 ## 4. Hiérarchie du contenu
 Pour chaque écran, avant de dessiner :
 1. **Objectif** : ce que le persona vient faire ici, en une phrase (tiré du flow).

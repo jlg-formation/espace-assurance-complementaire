@@ -89,7 +89,7 @@ Signaler les écrans *incomplets* et les parcours non cliquables de bout en bout
 Résumer le nombre d'écrans maquettés par zone et par version, les parcours cliquables, les retours acceptés et refusés, et lister les **composants récurrents** relevés (section de l'index). Indiquer comment ouvrir la galerie (`cd web; bun run dev`, puis `/#/wireframes`), conseiller un test des parcours cliquables avec quelques vrais utilisateurs, puis proposer l'étape suivante : `/ux-07-design-system`, à partir des composants récurrents des wireframes.
 
 ## Critères de qualité
-- **Bloquant** : `bun run verifier` passe — chaque écran de l'inventaire est maquetté, chaque état déclaré a un seul `h1`, chaque happy path se parcourt en cliquant
+- **Bloquant** : `bun run verifier` passe — chaque écran de l'inventaire est maquetté, chaque état déclaré a un seul `h1`, chaque happy path se parcourt en cliquant, le kit n'a aucune requête média `max-width`
 - **Bloquant** : chaque écran de l'inventaire a sa fiche, avec le même identifiant et le même nom
 - **Bloquant** : chaque contenu et chaque action de l'inventaire figure sur l'écran
 - Chaque chemin alternatif ou d'erreur des flows a son écran ou son état

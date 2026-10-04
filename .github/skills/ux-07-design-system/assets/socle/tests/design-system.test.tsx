@@ -45,6 +45,15 @@ describe('aucune valeur en dur', () => {
   }
 });
 
+describe("mobile d'abord", () => {
+  for (const f of feuilles) {
+    test(`${f} : requêtes média en min-width uniquement`, () => {
+      const css = readFileSync(`${racine}/${f}`, 'utf8');
+      expect(css.match(/@media[^{]*max-width[^{]*/g) ?? []).toEqual([]);
+    });
+  }
+});
+
 describe('correspondance avec le kit de wireframes', () => {
   for (const nom of Object.keys(kit) as (keyof typeof kit)[]) {
     test(nom, () => {

@@ -69,7 +69,7 @@ Dans `web/src/design-system/tokens/` :
 ### 6. Produire les composants
 Dans l'ordre validé (éléments, puis composants, puis modèles ; ceux du MVP d'abord), **un composant à la fois**, dans `web/src/design-system/composants/` sur le modèle de `Bouton` :
 1. `Nom.tsx` : pour un composant du kit, **mêmes props** (types de `src/projet/ui.ts`) et même structure HTML que le kit, classes `ds-*` ; pour un composant nouveau, ses props sont déclarées dans le fichier.
-2. `Nom.css` : **uniquement des tokens sémantiques** — aucune couleur, taille de police ni espacement en dur (vérifié par `bun test`).
+2. `Nom.css` : **uniquement des tokens sémantiques** — aucune couleur, taille de police ni espacement en dur — et **mobile d'abord** : styles de base pour le mobile, requêtes média en `min-width` uniquement (vérifié par `bun test`). Le `Gabarit` reproduit le comportement mobile du kit (barre d'onglets).
 3. `Nom.doc.tsx` : l'objet `doc` (numéro, rôle, fiche, exemples avec rendu et code) pour chaque variante et chaque état porté par une prop ; les états d'interaction (survol, focus, actif) se démontrent en direct dans la documentation.
 4. L'exporter dans `composants/index.ts` et l'ajouter à l'objet `ds`.
 5. Rédiger `docs/08-design-system/composants/NN-<composant>.component.md` selon [le modèle de fiche](./assets/composant-template.md).
@@ -100,10 +100,10 @@ Corriger ce qui peut l'être. Mettre à jour le statut de chaque composant : *te
 
 ### 10. Clôturer
 Signaler les composants *incomplets* et les composants du kit sans équivalent.
-Résumer les principes, la piste retenue, le nombre de tokens primitifs et sémantiques, les composants par niveau, les retours acceptés et refusés. Indiquer comment ouvrir la documentation (`cd web; bun run dev`, puis `/#/design-system`), puis proposer l'étape suivante : les prototypes, qui appliquent le design system aux écrans des wireframes.
+Résumer les principes, la piste retenue, le nombre de tokens primitifs et sémantiques, les composants par niveau, les retours acceptés et refusés. Indiquer comment ouvrir la documentation (`cd web; bun run dev`, puis `/#/design-system`), puis proposer l'étape suivante : `/ux-08-prototypes`, qui applique le design system aux écrans des wireframes.
 
 ## Critères de qualité
-- **Bloquant** : `bun run verifier` passe — `tokens.json` valide et alias résolus, `tokens.css` généré et à jour, contrastes WCAG AA (4,5:1 texte, 3:1 grand texte et éléments d'interface), aucune valeur en dur dans les CSS du design system, chaque composant du kit a son équivalent, chaque exemple documenté se rend
+- **Bloquant** : `bun run verifier` passe — `tokens.json` valide et alias résolus, `tokens.css` généré et à jour, contrastes WCAG AA (4,5:1 texte, 3:1 grand texte et éléments d'interface), aucune valeur en dur dans les CSS du design system, aucune requête média `max-width`, chaque composant du kit a son équivalent, chaque exemple documenté se rend
 - **Bloquant** : chaque composant de l'inventaire a son code, sa fiche et ses exemples documentés, états compris
 - Chaque composant vient d'un motif des wireframes, avec ses écrans d'origine ; aucun composant sans usage
 - Chaque principe s'appuie sur un constat de persona sourcé et se traduit en décisions vérifiables

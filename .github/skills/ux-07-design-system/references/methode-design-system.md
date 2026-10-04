@@ -70,7 +70,9 @@ Changer de marque = changer les primitifs et les alias ; les composants ne bouge
 | `duration` | `fast`, `base` |
 | `breakpoint` | `tablet` (768 px), `desktop` (1024 px) |
 
-Les variables CSS ne fonctionnent pas dans les requêtes média : les CSS des composants y écrivent la valeur de `breakpoint.*` en dur, avec un commentaire qui nomme le token. Autres valeurs tolérées : `0`, `1px` et `2px` pour les filets, les unités de mise en page (`%`, `vh`, `fr`). Le test « aucune valeur en dur » refuse le reste (couleurs, `rem`, `em`, pixels au-delà de 2).
+Les variables CSS ne fonctionnent pas dans les requêtes média : les CSS des composants y écrivent la valeur de `breakpoint.*` en dur, avec un commentaire qui nomme le token.
+
+**Mobile d'abord** : les styles de base d'un composant valent pour le mobile ; les requêtes média n'utilisent que `min-width` (`breakpoint.tablet`, `breakpoint.desktop`) pour enrichir la mise en page sur des écrans plus larges. Le `Gabarit` reproduit le comportement mobile du kit (barre d'onglets fixée en bas quand la zone le prévoit). `bun test` refuse toute requête `max-width`. Autres valeurs tolérées : `0`, `1px` et `2px` pour les filets, les unités de mise en page (`%`, `vh`, `fr`). Le test « aucune valeur en dur » refuse le reste (couleurs, `rem`, `em`, pixels au-delà de 2).
 
 ## 3. Contrastes (WCAG 2.2, niveau AA)
 | Paire | Seuil |

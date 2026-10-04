@@ -1,5 +1,6 @@
 // Vérifications bloquantes de ux-06 : copie conforme de l'asset du skill. Lancer : bun test
 import { describe, expect, test } from 'bun:test';
+import { readFileSync } from 'node:fs';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { MemoryRouter } from 'react-router';
 import { idsEcrans, type EcranId } from '../src/projet/ecrans';
@@ -24,6 +25,13 @@ describe('inventaire', () => {
       expect(wireframes[id]).toBeDefined();
     });
   }
+});
+
+describe("mobile d'abord", () => {
+  test('wireframe.css : requêtes média en min-width uniquement', () => {
+    const css = readFileSync(new URL('../src/wireframes/kit/wireframe.css', import.meta.url), 'utf8');
+    expect(css.match(/@media[^{]*max-width[^{]*/g) ?? []).toEqual([]);
+  });
 });
 
 describe('états', () => {

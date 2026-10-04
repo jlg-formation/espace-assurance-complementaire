@@ -1,0 +1,68 @@
+# ux-07-design-system — Manuel rapide
+
+Construit le design system d'une marque fictive à partir des composants récurrents des wireframes : principes, identité, tokens, composants React et documentation vivante, dans l'application `web/` (Bun + Vite + TypeScript + React).
+
+## Prérequis
+Avoir lancé `/ux-06-wireframes` : écrans maquettés dans `web/` et composants récurrents dans `docs/07-wireframes/00-index.md`.
+
+## Lancer
+```
+/ux-07-design-system            tout le système
+/ux-07-design-system Bouton     un composant
+```
+
+## Déroulé
+1. **Inventaire** des composants : ceux du kit de wireframes, plus les motifs récurrents, avec les incohérences à résoudre.
+2. **Principes** de design, voix et ton, formats, tirés des personas.
+3. **Pistes d'identité** : 2 ou 3 marques fictives, comparées sur le même extrait d'écran.
+4. **Validation** : vous choisissez la piste et validez principes et inventaire.
+5. **Tokens** : `tokens.json` (format W3C DTCG) → `tokens.css` généré, contrastes calculés.
+6. **Composants**, un à la fois : React + CSS, exemples documentés, fiche.
+7. **Écran témoin** : un wireframe passé au design system en changeant son import.
+8. **Retours** vers les wireframes, le kit, l'architecture et le backlog, appliqués seulement avec votre accord.
+9. **Relecture** : `bun run verifier`.
+10. **Clôture** : bilan et passage aux prototypes.
+
+## Livrables
+```
+docs/08-design-system/
+├── 00-index.md                         inventaire, correspondance avec le kit, retours
+├── 01-principes.md                     principes, voix et ton, formats
+├── 02-identite.md                      pistes, piste retenue, contrastes
+└── composants/01-bouton.component.md   une fiche par composant
+
+web/
+├── scripts/tokens.ts, contrastes.ts
+├── src/design-system/
+│   ├── tokens/tokens.json              source (W3C DTCG)
+│   ├── tokens/tokens.css               généré : bun run tokens
+│   ├── tokens/contrastes.json          paires à vérifier : bun run contrastes
+│   ├── base.css
+│   ├── composants/Bouton.tsx, Bouton.css, Bouton.doc.tsx, index.ts
+│   ├── exemples/                       écran témoin
+│   └── Documentation.tsx, Pistes.tsx
+└── tests/design-system.test.tsx
+```
+
+## Voir et vérifier
+```
+cd web
+bun run dev          puis /#/design-system (documentation) et /#/design-system/pistes
+bun run tokens       régénère tokens.css après modification de tokens.json
+bun run contrastes   tableau des contrastes WCAG
+bun run verifier     types + tests
+```
+
+## Passer d'un wireframe au design system
+```tsx
+import { Bouton, Gabarit } from '../../kit/kit';                       // wireframe
+import { Bouton, Gabarit } from '../../../design-system/composants';   // prototype
+```
+Mêmes noms, mêmes props : le reste de l'écran ne change pas.
+
+## Points bloquants
+- `bun run verifier` passe : tokens à jour et résolus, contrastes AA, aucune valeur en dur, chaque composant du kit a son équivalent, chaque exemple se rend.
+- Chaque composant a son code, sa fiche et ses exemples, états compris.
+
+## Et ensuite ?
+`/ux-08-prototypes` : les écrans des wireframes, habillés par le design system.
