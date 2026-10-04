@@ -48,7 +48,7 @@ Recueillir une information de l'adhérent, avec un libellé toujours visible, l'
 |---|---|---|---|
 | Repos | — | bordure grise de 1 px, 44 px de haut | `color.border.strong` |
 | Survol | `:hover` | bordure foncée | `color.text.default` |
-| Focus | `:focus-visible` | contour de 3 px | `color.border.focus`, `size.focus-ring` |
+| Focus | `:focus` (tous les champs, y compris les dates) | contour de 3 px décalé de 2 px | `color.border.focus`, `size.focus-ring` |
 | Aide | `aide` | texte secondaire avant le champ | `color.text.muted`, `font.size.s` |
 | Erreur | `erreur` | bordure rouge de 2 px, message sous le champ précédé de « Erreur : » | `color.text.error` |
 | Obligatoire | `obligatoire` | « (obligatoire) » dans le libellé | — |
@@ -62,7 +62,7 @@ Recueillir une information de l'adhérent, avec un libellé toujours visible, l'
 - **Clavier** : Tab ; flèches dans une liste d'options ; Espace ou Entrée ouvre le sélecteur de fichier
 - **ARIA** : `aria-describedby` vers l'aide et l'erreur ; `aria-invalid="true"` en erreur ; `required`
 - **Lecteur d'écran** : libellé, « obligatoire », aide, puis « non valide » et le message d'erreur
-- **Autres** : l'erreur est signalée par le texte « Erreur : » et l'épaisseur de bordure, pas seulement par le rouge
+- **Autres** : l'erreur est signalée par le texte « Erreur : » et l'épaisseur de bordure, pas seulement par le rouge ; focus en `:focus` car Chromium ne déclenche pas `:focus-visible` sur un champ de date ; largeur limitée à 100 % pour qu'une liste d'options longue ne dépasse pas l'écran (retours des prototypes)
 
 ## Rédaction
 Libellé : nom de l'information, mots du glossaire (« Date de début de l'arrêt »). Aide : format ou origine (« Celle de l'avis d'arrêt »). Erreur : ce qui ne va pas et comment corriger (« Mot de passe incorrect. Il vous reste 4 essais. »).

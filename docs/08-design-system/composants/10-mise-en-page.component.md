@@ -43,7 +43,7 @@ Aucun : éléments non interactifs.
 - **Clavier** : l'ordre de tabulation suit l'ordre du code : la colonne latérale vient après la principale
 - **ARIA** : aucun
 - **Lecteur d'écran** : transparent
-- **Autres** : jamais d'inversion visuelle de l'ordre (`order`, `row-reverse`) ; zoom à 200 % : retour à une colonne
+- **Autres** : jamais d'inversion visuelle de l'ordre (`order`, `row-reverse`) ; zoom à 200 % : retour à une colonne ; chaque colonne a `min-width: 0` pour qu'un champ large ne force pas le débordement (retour des prototypes)
 
 ## Rédaction
 Non concerné.

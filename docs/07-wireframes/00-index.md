@@ -127,6 +127,9 @@ Ouvrir la galerie : `cd web; bun run dev`, puis `/#/wireframes`. Vérifier : `bu
 | EC27, EC36, EC38, EC46 | wireframes (origine `DS`) | motif à harmoniser | statuts | 7 statuts du design system (`LigneSuivi`) : « En étude », « En attente » → « En cours », « Attendue » → « À fournir » ; retard d'EC36 sans gras | accepté |
 | EC11, EC22 | wireframes (origine `DS`) | motif à harmoniser | lignes libellé / valeur | Valeur en `strong` (`LigneValeur`) | accepté |
 | EC43 | wireframes (origine `DS`) | donnée incohérente | état `hors-delai` | Date de fin prévue au 30 septembre 2026 (elle précédait la date de début) | accepté |
+| EC33 | wireframes (origine `PR`) | structure | options « Quel document ? » | Option « Devis d'un praticien » en double retirée | accepté |
+| EC36 | wireframes (origine `PR`) | état | état `manquant` | Le devis passe en « À fournir » et mène à EC33 pour compléter | accepté |
+| Tous | kit (origine `PR`) | accessibilité | `Gabarit` | Lien d'évitement « Aller au contenu » (asset ux-06 et copie) | accepté |
 
 ## Questions ouvertes
 - ~~Le libellé d'onglet « Mon arrêt de travail » tient-il sur une ligne à 375 px ?~~ Oui, vérifié dans le gabarit espace adhérent.

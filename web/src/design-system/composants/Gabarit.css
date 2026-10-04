@@ -1,5 +1,19 @@
 /* Modèle de page. Mobile d'abord : la navigation en onglets est fixée en bas, remise dans le flux à partir de 768 px. */
 
+.ds-evitement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding: var(--ds-space-2) var(--ds-space-4);
+  background: var(--ds-color-action-primary);
+  color: var(--ds-color-action-primary-text);
+  font-weight: var(--ds-font-weight-bold);
+  transform: translateY(-120%);
+}
+.ds-evitement:focus { transform: none; }
+:where(.ds-racine) main:focus { outline: none; }
+
 .ds-entete {
   display: flex;
   flex-wrap: wrap;

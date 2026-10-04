@@ -93,8 +93,13 @@ Ouvrir la documentation : `cd web; bun run dev`, puis `/#/design-system`. Vérif
 | wireframes | donnée incohérente | EC43 état `hors-delai` | Date de fin prévue (12 août 2026) antérieure à la date de début (19 août 2026) : corriger la date de fin (par exemple 30 septembre 2026) | accepté (wireframe et écran témoin : 30 septembre 2026) |
 | architecture | libellé trop long | onglet « Mon arrêt de travail » | Sur 3 lignes à 375 px dans la barre d'onglets du design system (texte 14 px) : libellé court « Mon arrêt » pour l'onglet mobile, libellé complet ailleurs | refusé (libellé complet gardé : lisible, onglet plus haut) |
 | kit | prop manquante | `Champ` | Type `case` (cases à cocher, choix multiples) pour EC08 « Mes besoins de santé » et EC10, reporté depuis ux-06 : à ajouter au contrat `ui.ts`, au kit puis au design system | refusé (listes d'options gardées) |
+| design system (origine `PR`) | état manquant | `Champ`, focus | Contour au `:focus` des champs : les champs de date n'avaient aucun focus visible (EC06, EC43, EC47) | accepté |
+| design system (origine `PR`) | débordement | `Champ`, `Colonnes` | Champs limités à la largeur disponible, colonnes avec `min-width: 0` (EC02 à 375 px) | accepté |
+| design system (origine `PR`) | débordement | tableaux (`base.css`) | Cellules resserrées et mots coupés sous 768 px (EC03, EC37 à 320 px) | accepté |
+| design system et kit (origine `PR`) | accessibilité | `Gabarit` | Lien d'évitement « Aller au contenu », `main` focalisable | accepté |
+| kit (origine `PR`) | prop manquante | `Bouton` | Prop `onClick` facultative pour une action locale | refusé |
 
 ## Questions ouvertes
 - ~~Cases à cocher : retour vers le kit ?~~ Refusé : listes d'options gardées.
 - Modale : la gestion du focus (piégeage, Échap, retour au déclencheur) est à ajouter aux prototypes si un écran l'emploie ; aucun wireframe ne l'utilise aujourd'hui.
-- Lien d'évitement « Aller au contenu » absent du contrat `Gabarit` : à traiter aux prototypes (exigence T1).
+- Lien d'évitement « Aller au contenu » : ajouté au `Gabarit` (retour des prototypes, accepté).

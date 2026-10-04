@@ -46,6 +46,13 @@ body { margin: 0; }
 .wf-outil [aria-current] { font-weight: 700; }
 
 /* Structure */
+.wf-evitement {
+  position: absolute; top: 0; left: 0; z-index: 20;
+  padding: .5rem 1rem; border: 2px solid var(--wf-noir); background: var(--wf-blanc);
+  font-weight: 700; transform: translateY(-120%);
+}
+.wf-evitement:focus { transform: none; }
+:where(.wf-racine) main:focus { outline: none; }
 .wf-entete {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem;
   padding: .5rem 1rem;

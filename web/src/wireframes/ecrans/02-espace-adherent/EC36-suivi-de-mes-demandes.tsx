@@ -23,10 +23,14 @@ export default function EC36({ etat }: PropsEcran) {
             <Ligne>
               {etat === 'retard' ? (
                 <span>Devis d'orthodontie de Lucas — envoyé le 3 oct. — réponse au 17 oct. : avis de notre dentiste-conseil en cours</span>
+              ) : etat === 'manquant' ? (
+                <Lien vers="EC33">Devis d'orthodontie de Lucas — envoyé le 3 oct. 2026 — code des actes manquant sur la page 1</Lien>
               ) : (
                 <Lien vers="EC37">Devis d'orthodontie de Lucas — envoyé le 3 oct. 2026</Lien>
               )}
-              <Etiquette ton={etat === 'retard' ? 'avertissement' : 'succes'}>{etat === 'retard' ? 'Retardée' : 'Réponse disponible'}</Etiquette>
+              <Etiquette ton={etat === 'retard' || etat === 'manquant' ? 'avertissement' : 'succes'}>
+                {etat === 'retard' ? 'Retardée' : etat === 'manquant' ? 'À fournir' : 'Réponse disponible'}
+              </Etiquette>
             </Ligne>
             <Ligne>
               <span>Question : attestation de cotisations 2025 — envoyée le 1er oct., réponse sous 2 jours ouvrés</span>

@@ -1,3 +1,4 @@
+import { useId, type MouseEvent } from 'react';
 import { Link } from 'react-router';
 import { useChemin } from '../../projet/navigation';
 import { zones } from '../../projet/zones';
@@ -7,8 +8,15 @@ import './Gabarit.css';
 export function Gabarit({ zone, rubrique, ariane, children }: PropsGabarit) {
   const z = zones[zone];
   const chemin = useChemin();
+  const idContenu = useId();
+  // HashRouter : une ancre #id changerait de route, le focus est donc déplacé à la main.
+  const allerAuContenu = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    document.getElementById(idContenu)?.focus();
+  };
   return (
     <>
+      <a className="ds-evitement" href={`#${idContenu}`} onClick={allerAuContenu}>Aller au contenu</a>
       <header className="ds-entete">
         <Link className="ds-logo" to={chemin(z.accueil)}>Clarea</Link>
         {z.utilitaire.length > 0 && (
@@ -48,7 +56,7 @@ export function Gabarit({ zone, rubrique, ariane, children }: PropsGabarit) {
           </ol>
         </nav>
       )}
-      <main>{children}</main>
+      <main id={idContenu} tabIndex={-1}>{children}</main>
       {z.pied.length > 0 && (
         <footer className="ds-pied">
           <ul>

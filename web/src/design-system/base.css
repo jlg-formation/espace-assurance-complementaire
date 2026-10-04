@@ -23,10 +23,15 @@
 :where(.ds-racine) table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 :where(.ds-racine) caption { text-align: left; font-weight: var(--ds-font-weight-bold); padding-bottom: var(--ds-space-2); }
 :where(.ds-racine) th, :where(.ds-racine) td {
-  padding: var(--ds-space-2) var(--ds-space-3);
+  padding: var(--ds-space-1) var(--ds-space-2);
   border-bottom: 1px solid var(--ds-color-border-default);
   text-align: left;
   vertical-align: top;
+  overflow-wrap: anywhere;
+}
+/* breakpoint.tablet */
+@media (min-width: 768px) {
+  :where(.ds-racine) th, :where(.ds-racine) td { padding: var(--ds-space-2) var(--ds-space-3); overflow-wrap: normal; }
 }
 :where(.ds-racine) thead th { border-bottom: 2px solid var(--ds-color-border-strong); background: var(--ds-color-background-subtle); }
 :where(.ds-racine) :focus-visible {

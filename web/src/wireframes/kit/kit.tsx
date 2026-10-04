@@ -1,5 +1,5 @@
 // Kit de wireframes : copie conforme de l'asset du skill ux-06. Implémente le contrat de src/projet/ui.ts.
-import { useId } from 'react';
+import { useId, type MouseEvent } from 'react';
 import { Link } from 'react-router';
 import { useChemin } from '../../projet/navigation';
 import { zones } from '../../projet/zones';
@@ -12,8 +12,15 @@ import './wireframe.css';
 export function Gabarit({ zone, rubrique, ariane, children }: PropsGabarit) {
   const z = zones[zone];
   const chemin = useChemin();
+  const idContenu = useId();
+  // HashRouter : une ancre #id changerait de route, le focus est donc déplacé à la main.
+  const allerAuContenu = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    document.getElementById(idContenu)?.focus();
+  };
   return (
     <>
+      <a className="wf-evitement" href={`#${idContenu}`} onClick={allerAuContenu}>Aller au contenu</a>
       <header className="wf-entete">
         <Link className="wf-logo" to={chemin(z.accueil)}>LOGO</Link>
         {z.utilitaire.length > 0 && (
@@ -53,7 +60,7 @@ export function Gabarit({ zone, rubrique, ariane, children }: PropsGabarit) {
           </ol>
         </nav>
       )}
-      <main>{children}</main>
+      <main id={idContenu} tabIndex={-1}>{children}</main>
       {z.pied.length > 0 && (
         <footer className="wf-pied">
           <ul>

@@ -24,7 +24,7 @@ export default function EC33({ etat }: PropsEcran) {
     >
       <h1>{c.titre}</h1>
       <Pile>
-        <Champ id="type" libelle="Quel document ?" options={[c.type, 'Devis d’un praticien', 'Pièce pour un arrêt de travail', 'Autre document']} valeur={c.type} obligatoire />
+        <Champ id="type" libelle="Quel document ?" options={[...new Set([c.type, 'Devis d’un praticien', 'Pièce pour un arrêt de travail', 'Autre document'])]} valeur={c.type} obligatoire />
         <Champ id="pour" libelle={arret ? 'Pour quel dossier ?' : 'Pour qui ?'} options={[c.pour]} obligatoire />
         <Champ id="fichiers" libelle="Photos ou PDF" type="file" aide="Prenez chaque page en photo. Vous pouvez ajouter plusieurs pages : 3 pages ajoutées." obligatoire />
         <Note n={1} />

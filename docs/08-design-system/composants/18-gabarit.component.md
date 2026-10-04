@@ -22,12 +22,13 @@ Structure de page d'une zone : en-tête avec logo et liens utilitaires, navigati
 
 | Partie | Élément HTML | Classe | Obligatoire |
 |---|---|---|---|
+| Lien d'évitement | `a` « Aller au contenu », masqué hors focus | `ds-evitement` | oui |
 | En-tête | `header` | `ds-entete` | oui |
 | Logo | `a` « Clarea » | `ds-logo` | oui |
 | Liens utilitaires | `nav` + `ul` | `ds-utilitaire` | selon la zone |
 | Navigation principale | `nav` + `ul` | `ds-nav-globale`, `ds-nav-globale--onglets` | oui |
 | Fil d'Ariane | `nav` + `ol` | `ds-ariane` | non |
-| Contenu | `main`, 72 rem au plus | — | oui |
+| Contenu | `main`, 72 rem au plus, `id` unique et `tabIndex={-1}` | — | oui |
 | Pied de page | `footer` + `ul` | `ds-pied` | oui |
 
 ## Variantes
@@ -55,7 +56,7 @@ Structure de page d'une zone : en-tête avec logo et liens utilitaires, navigati
 - **Clavier** : ordre logo → utilitaires → navigation → fil d'Ariane → contenu → pied ; sur mobile, la barre d'onglets, fixée en bas, reste avant le contenu dans l'ordre de tabulation
 - **ARIA** : `aria-label` « Liens utilitaires », « Navigation principale », « Fil d'Ariane » ; `aria-current="page"` sur la rubrique et sur le dernier élément du fil seulement
 - **Lecteur d'écran** : « navigation Navigation principale, lien Mon arrêt de travail, page actuelle »
-- **Autres** : cibles de 44 px partout (onglets, fil d'Ariane, utilitaires, pied) ; espace réservé sous le contenu pour la barre d'onglets ; à prévoir aux prototypes : lien d'évitement « Aller au contenu »
+- **Autres** : cibles de 44 px partout (onglets, fil d'Ariane, utilitaires, pied) ; espace réservé sous le contenu pour la barre d'onglets ; lien d'évitement « Aller au contenu » au premier Tab : il déplace le focus sur `main` sans changer de route (HashRouter), ajouté après le contrôle clavier des prototypes
 
 ## Rédaction
 Libellés de [03-navigation.nav.md](../../06-architecture-information/03-navigation.nav.md) et du glossaire, sans modification. Le logo est le nom de la marque.
