@@ -83,7 +83,7 @@ Corriger ce qui peut l'être ; noter ce qui reste non conforme pour la clôture.
 
 ### 7. Clôturer
 Signaler les éventuels points restés non conformes à la relecture.
-Résumer les livrables, les principaux apprentissages, les hypothèses invalidées et les zones encore faiblement fondées. Proposer l'étape suivante (user stories, user flows).
+Résumer les livrables, les principaux apprentissages, les hypothèses invalidées et les zones encore faiblement fondées. Proposer l'étape suivante : `/ux-03-user-stories`, puis `/ux-04-user-flows`.
 
 ## Critères de qualité
 - Chaque affirmation de persona ou de journey map cite au moins une source, ou est marquée *hypothèse*

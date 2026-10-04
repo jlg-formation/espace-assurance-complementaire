@@ -1,0 +1,33 @@
+/* Base du design system, limitée à .ds-racine. Tokens sémantiques uniquement. */
+
+.ds-racine, .ds-racine *, .ds-racine *::before, .ds-racine *::after { box-sizing: border-box; }
+
+:where(.ds-racine) {
+  min-height: 100vh;
+  font-family: var(--ds-font-family-base);
+  font-size: var(--ds-font-size-m);
+  line-height: var(--ds-font-line-height-base);
+  color: var(--ds-color-text-default);
+  background: var(--ds-color-background-default);
+}
+
+:where(.ds-racine) h1, :where(.ds-racine) h2, :where(.ds-racine) h3 {
+  font-family: var(--ds-font-family-heading);
+  line-height: var(--ds-font-line-height-tight);
+}
+:where(.ds-racine) h1 { font-size: var(--ds-font-size-xxl); margin: 0 0 var(--ds-space-5); }
+:where(.ds-racine) h2 { font-size: var(--ds-font-size-xl); margin: var(--ds-space-6) 0 var(--ds-space-3); }
+:where(.ds-racine) h3 { font-size: var(--ds-font-size-l); margin: var(--ds-space-5) 0 var(--ds-space-2); }
+:where(.ds-racine) p { margin: 0 0 var(--ds-space-3); }
+:where(.ds-racine) a { color: var(--ds-color-text-link); }
+:where(.ds-racine) :focus-visible {
+  outline: var(--ds-size-focus-ring) solid var(--ds-color-border-focus);
+  outline-offset: var(--ds-size-focus-ring);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-racine *, .ds-racine *::before, .ds-racine *::after {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+}

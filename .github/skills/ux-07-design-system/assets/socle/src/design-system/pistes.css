@@ -1,0 +1,15 @@
+/* Pistes d'identité : antérieures aux tokens, chaque piste définit ses propres variables. */
+.pistes-page { min-height: 100vh; padding: 1rem; font-family: system-ui, sans-serif; background: #f0f0f0; color: #222; }
+.pistes { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+.piste { padding: 1.5rem; background: var(--fond); color: var(--texte); font-family: var(--police); border-radius: var(--rayon); }
+.piste h2 { font-family: var(--police-titre); }
+.piste-logo { font-family: var(--police-titre); font-weight: 700; font-size: 1.25rem; color: var(--primaire); }
+.piste-btn {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 1rem;
+  border: 2px solid var(--primaire); border-radius: var(--rayon);
+  color: var(--primaire); font-weight: 700; text-decoration: none;
+}
+.piste-btn--principal { background: var(--primaire); color: var(--sur-primaire); }
+.piste-carte { margin: 1rem 0; padding: var(--densite); border: 1px solid var(--bordure); border-radius: var(--rayon); }
+.piste-montant { font-size: 1.5rem; font-weight: 700; }
+.piste-alerte { padding: var(--densite); border-left: 6px solid var(--erreur); background: var(--erreur-fond); color: var(--erreur); }

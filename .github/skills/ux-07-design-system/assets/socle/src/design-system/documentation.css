@@ -1,0 +1,28 @@
+/* Mise en page de la documentation uniquement. Jamais chargé par les prototypes. */
+
+.doc-entete {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--ds-space-3);
+  padding: var(--ds-space-3) var(--ds-space-5);
+  border-bottom: 1px solid var(--ds-color-border-default);
+}
+.doc-entete ul { display: flex; flex-wrap: wrap; gap: var(--ds-space-3); list-style: none; margin: 0; padding: 0; }
+.doc-titre-site { margin: 0; font-weight: var(--ds-font-weight-bold); }
+
+.doc-contenu { max-width: 64rem; margin: 0 auto; padding: var(--ds-space-5); }
+
+.doc-nuancier, .doc-espacements { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--ds-space-2); }
+.doc-nuancier li, .doc-espacements li { display: flex; flex-wrap: wrap; align-items: center; gap: var(--ds-space-3); }
+.doc-pastille {
+  display: inline-block; width: var(--ds-space-7); height: var(--ds-space-6);
+  border: 1px solid var(--ds-color-border-default); border-radius: var(--ds-radius-s);
+}
+.doc-valeur { color: var(--ds-color-text-muted); font-size: var(--ds-font-size-s); }
+.doc-barre { display: inline-block; height: var(--ds-space-4); background: var(--ds-color-action-primary); }
+
+.doc-exemple { margin: 0 0 var(--ds-space-5); border: 1px solid var(--ds-color-border-default); border-radius: var(--ds-radius-m); }
+.doc-exemple figcaption { padding: var(--ds-space-2) var(--ds-space-4); font-weight: var(--ds-font-weight-bold); border-bottom: 1px solid var(--ds-color-border-default); }
+.doc-rendu { padding: var(--ds-space-5) var(--ds-space-4); }
+.doc-exemple pre {
+  margin: 0; padding: var(--ds-space-3) var(--ds-space-4); overflow-x: auto;
+  background: var(--ds-color-background-subtle); font-size: var(--ds-font-size-s);
+}

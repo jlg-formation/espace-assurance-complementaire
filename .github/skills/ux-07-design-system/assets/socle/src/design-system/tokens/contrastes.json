@@ -1,0 +1,17 @@
+[
+  { "premierPlan": "color.text.default", "arrierePlan": "color.background.default", "usage": "Texte courant", "seuil": 4.5 },
+  { "premierPlan": "color.text.muted", "arrierePlan": "color.background.default", "usage": "Texte secondaire", "seuil": 4.5 },
+  { "premierPlan": "color.text.default", "arrierePlan": "color.background.subtle", "usage": "Texte sur fond de bloc", "seuil": 4.5 },
+  { "premierPlan": "color.text.link", "arrierePlan": "color.background.default", "usage": "Lien", "seuil": 4.5 },
+  { "premierPlan": "color.text.inverse", "arrierePlan": "color.background.inverse", "usage": "Texte sur fond foncé", "seuil": 4.5 },
+  { "premierPlan": "color.action.primary-text", "arrierePlan": "color.action.primary", "usage": "Texte du bouton principal", "seuil": 4.5 },
+  { "premierPlan": "color.action.primary-text", "arrierePlan": "color.action.primary-hover", "usage": "Texte du bouton principal au survol", "seuil": 4.5 },
+  { "premierPlan": "color.action.secondary-text", "arrierePlan": "color.background.default", "usage": "Texte du bouton secondaire", "seuil": 4.5 },
+  { "premierPlan": "color.border.strong", "arrierePlan": "color.background.default", "usage": "Bordure de champ", "seuil": 3 },
+  { "premierPlan": "color.border.focus", "arrierePlan": "color.background.default", "usage": "Indicateur de focus", "seuil": 3 },
+  { "premierPlan": "color.feedback.error.text", "arrierePlan": "color.feedback.error.background", "usage": "Message d'erreur", "seuil": 4.5 },
+  { "premierPlan": "color.feedback.success.text", "arrierePlan": "color.feedback.success.background", "usage": "Message de succès", "seuil": 4.5 },
+  { "premierPlan": "color.feedback.warning.text", "arrierePlan": "color.feedback.warning.background", "usage": "Avertissement", "seuil": 4.5 },
+  { "premierPlan": "color.feedback.info.text", "arrierePlan": "color.feedback.info.background", "usage": "Information", "seuil": 4.5 },
+  { "premierPlan": "color.text.error", "arrierePlan": "color.background.default", "usage": "Erreur de champ", "seuil": 4.5 }
+]

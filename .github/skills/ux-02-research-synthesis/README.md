@@ -42,4 +42,4 @@ docs/
 Si les données viennent de `/ux-01b-mock-research`, le skill les traite comme des données de terrain et ajoute un bandeau « données simulées » sur chaque livrable.
 
 ## Et ensuite ?
-User stories → user flows → architecture de l'information → design system → prototypes.
+`/ux-03-user-stories` → `/ux-04-user-flows` → architecture de l'information → design system → prototypes.
