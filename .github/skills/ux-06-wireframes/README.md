@@ -9,7 +9,7 @@ Transforme chaque écran de l'inventaire en wireframe basse fidélité : un écr
 ## Lancer
 ```
 /ux-06-wireframes                     tous les écrans
-/ux-06-wireframes espace adhérent     une zone
+/ux-06-wireframes espace client       une zone
 /ux-06-wireframes EC04                un écran
 ```
 
@@ -27,13 +27,13 @@ Transforme chaque écran de l'inventaire en wireframe basse fidélité : un écr
 ```
 docs/07-wireframes/
 ├── 00-index.md                                gabarits, écrans, parcours cliquables, retours
-└── 02-espace-adherent/
-    └── EC04-suivi-des-remboursements.wireframe.md   fiche : hiérarchie, actions, états, annotations
+└── 02-espace-client/
+    └── EC04-suivi-des-demandes.wireframe.md        fiche : hiérarchie, actions, états, annotations
 
 web/
 ├── src/projet/                                ecrans.ts, zones.ts, parcours.ts : miroirs de l'architecture et des flows
 ├── src/wireframes/kit/                        kit de wireframes (copie conforme du skill)
-├── src/wireframes/ecrans/02-espace-adherent/EC04-suivi-des-remboursements.tsx
+├── src/wireframes/ecrans/02-espace-client/EC04-suivi-des-demandes.tsx
 ├── src/wireframes/registre.ts                 écrans maquettés et leurs états
 └── tests/wireframes.test.tsx                  inventaire, états, parcours cliquables
 ```

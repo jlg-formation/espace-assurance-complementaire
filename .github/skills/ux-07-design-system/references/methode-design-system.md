@@ -5,7 +5,7 @@
 |---|---|---|---|
 | Tokens | Décisions de base, sans forme | `color.action.primary`, `space.4` | Identité, principes |
 | **Élément** | Plus petite pièce d'interface utile | Bouton, Champ, Lien, Etiquette, Alerte | Composants du kit de wireframes |
-| **Composant** | Assemblage d'éléments avec un rôle | Ligne de remboursement, carte de contrat, dépôt de facture | Motifs récurrents des wireframes |
+| **Composant** | Assemblage d'éléments avec un rôle | Ligne de demande, carte de contrat, dépôt de justificatif | Motifs récurrents des wireframes |
 | **Modèle** | Structure d'une page | Gabarit de zone : en-tête, navigation, pied | `Gabarit` du kit |
 | Page | Modèle rempli de contenus réels | Prototype d'un écran | `ux-08` |
 
@@ -93,25 +93,25 @@ Une piste est une hypothèse d'identité au service des principes, pas un goût 
 
 | Levier | Variations possibles |
 |---|---|
-| Palette primaire | Teinte (bleu de confiance, vert de santé, violet, terracotta...) ; une gamme de 50 à 900 |
+| Palette primaire | Teinte (bleu de confiance, vert apaisant, violet, terracotta...) ; une gamme de 50 à 900 |
 | Neutres | Gris froids ou chauds |
 | Typographie | Piles système : sans empattement humaniste (`"Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif`), à empattement pour les titres (`Georgia, "Times New Roman", serif`), arrondie (`ui-rounded, "SF Pro Rounded", system-ui, sans-serif`) |
 | Échelle typographique | Rapport 1,2 (sobre) ou 1,25 (affirmé) |
 | Rayon | 0 (institutionnel), 4 px (neutre), 12 px (chaleureux) |
 | Densité | Espacements serrés (beaucoup d'informations) ou aérés (rassurant) |
 
-Les couleurs de retour (erreur, succès, avertissement, information) sont distinctes de la primaire et toujours doublées d'un texte ou d'une icône. Le nom de la marque est inventé ; vérifier qu'il n'évoque aucun assureur, aucune mutuelle ni aucune banque existants. Le logo est typographique : nom de la marque, police et couleur des tokens.
+Les couleurs de retour (erreur, succès, avertissement, information) sont distinctes de la primaire et toujours doublées d'un texte ou d'une icône. Le nom de la marque est inventé ; vérifier qu'il n'évoque aucune marque existante, en particulier dans le secteur du projet. Le logo est typographique : nom de la marque, police et couleur des tokens.
 
 ## 5. Principes de design
 Un bon principe :
-- part d'un constat sourcé (« Les personas découvrent leur reste à charge après coup » `[P02]` `[P05]`) ;
+- part d'un constat sourcé (« Les personas ne savent pas où en est leur demande et appellent pour le savoir » `[P02]` `[P05]`) ;
 - tranche entre deux options raisonnables (« Clair avant d'être complet » écarte « tout montrer sur un écran ») ;
-- se traduit en décisions vérifiables dans les composants (« Le montant remboursé est en premier et en gras ; le détail du calcul est replié »).
+- se traduit en décisions vérifiables dans les composants (« Le statut et le délai sont en premier ; l'historique détaillé est replié »).
 
 3 à 5 principes, pas plus : au-delà, aucun n'arbitre.
 
 ## 6. Rédaction
-- **Voix** : constante (qui parle : un interlocuteur clair et bienveillant, par exemple). **Ton** : s'adapte au moment (une erreur de paiement n'est pas un remboursement reçu).
+- **Voix** : constante (qui parle : un interlocuteur clair et bienveillant, par exemple). **Ton** : s'adapte au moment (un refus n'est pas une demande acceptée).
 - Vocabulaire : celui du glossaire, à la lettre.
 - Formats français, avec espaces insécables :
 
@@ -140,7 +140,7 @@ Le contrat `web/src/projet/ui.ts` définit les composants du kit et leurs props.
 |---|---|
 | Équivalent direct : même nom, mêmes props, même structure HTML, classes `ds-*` | `Bouton` du kit (`wf-btn`) → `Bouton` du design system (`ds-btn`) |
 | Outil de wireframe | `Note` ne rend rien ; `Image` et `Texte` gardent un rendu de remplacement, à remplacer par de vrais contenus dans les prototypes |
-| Motif récurrent devenu composant | `Ligne` + `Lien` + `Etiquette` → `LigneMontant` : composant nouveau, ses props dans son fichier, la fusion notée dans l'index |
+| Motif récurrent devenu composant | `Ligne` + `Lien` + `Etiquette` → `LigneDemande` : composant nouveau, ses props dans son fichier, la fusion notée dans l'index |
 
 Le test « correspondance avec le kit » vérifie que chaque composant du kit existe dans l'objet `ds`. Un écran passe du wireframe au prototype en changeant son import ; seules les fusions validées modifient sa structure.
 

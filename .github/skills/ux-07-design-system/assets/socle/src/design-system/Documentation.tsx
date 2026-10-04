@@ -49,7 +49,7 @@ export function Documentation() {
           <h3>Tailles de texte</h3>
           {tailles.map((t) => (
             <p key={t.chemin} style={{ fontSize: `var(${nomCss(t.chemin)})` }}>
-              <code>{t.chemin}</code> {valeurCss(t)} — Consultation généraliste, 18,55 € remboursés
+              <code>{t.chemin}</code> {valeurCss(t)} — Attestation annuelle, réponse sous 5 jours
             </p>
           ))}
           <h3>Espacements</h3>

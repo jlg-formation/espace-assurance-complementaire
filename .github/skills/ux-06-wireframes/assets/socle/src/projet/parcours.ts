@@ -14,8 +14,8 @@ export interface Parcours {
 export const parcours: Parcours[] = [
   {
     flow: 'UF-01.01',
-    tache: 'Envoyer une facture et savoir quand je serai remboursé',
-    entree: 'Facture reçue chez le médecin',
+    tache: 'Envoyer une demande et savoir quand elle sera traitée',
+    entree: 'Courrier demandant un justificatif',
     happyPath: ['EC04', 'EC05'],
   },
 ];

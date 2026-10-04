@@ -15,6 +15,8 @@ Les écrans nommés dans les flows forment un inventaire unique, matière premi�
 
 Méthode détaillée : [méthode des user flows](./references/methode-flows.md).
 
+**Exemples commentés** : [exemples](./references/exemples.md) — un flow complet (diagramme, chemins, couverture, retours) sur un projet fictif, et les erreurs courantes. Les relire avant de dessiner ; ne jamais recopier leur contenu.
+
 ## Prérequis
 - Livrables de `ux-03-user-stories` : `docs/04-user-stories/00-story-map.md`, les `.epic.md` et `.story.md`.
 - Pour les variantes et les points d'entrée : `docs/02-persona/*.persona.md`, `docs/03-customer-journey-map/*.cjm.md`.
@@ -30,10 +32,10 @@ Si `docs/05-user-flows/` contient déjà des livrables, demander s'il faut les c
 
 ### 1. Identifier les tâches
 Lire `00-story-map.md`, puis traiter **une épopée à la fois** : lire son `.epic.md` et ses `.story.md`.
-- Regrouper les stories en **tâches** : un objectif du persona, avec un déclencheur et une fin nette (« Envoyer une facture et savoir quand je serai remboursé »).
+- Regrouper les stories en **tâches** : un objectif du persona, avec un déclencheur et une fin nette (« Envoyer une demande et savoir quand elle sera traitée »).
 - Pour chaque tâche, noter : stories couvertes, persona principal, autres personas concernés, points d'entrée (tirés des journey maps), appareil principal (tiré de la section « Quand et sur quoi » de la fiche persona).
 - Chaque story hors `Won't` est couverte par au moins un flow. Une story peut l'être par plusieurs. Exception : une story sans interaction à dessiner est listée dans « Stories non couvertes » de l'index, avec sa raison, et présentée à la validation.
-- Une tâche peut mobiliser des stories d'autres épopées (ex : se connecter avant d'envoyer une facture). Ranger le flow dans l'épopée de sa story principale. Les stories d'autres épopées sont **mobilisées**, pas couvertes : les citer avec leur chemin complet si leurs étapes sont dessinées ici, ou renvoyer vers le flow qui les couvre (`uf1[["UF-MM.FF ..."]]`). Un renvoi ne vise qu'un flow présent dans l'index ; sinon, dessiner les étapes et citer la story.
+- Une tâche peut mobiliser des stories d'autres épopées (ex : se connecter avant d'envoyer une demande). Ranger le flow dans l'épopée de sa story principale. Les stories d'autres épopées sont **mobilisées**, pas couvertes : les citer avec leur chemin complet si leurs étapes sont dessinées ici, ou renvoyer vers le flow qui les couvre (`uf1[["UF-MM.FF ..."]]`). Un renvoi ne vise qu'un flow présent dans l'index ; sinon, dessiner les étapes et citer la story.
 
 Consigner aussitôt chaque tâche dans la section « Index des flows » de `docs/05-user-flows/00-index.md` (créé selon [le modèle d'index](./assets/index-template.md)). En cas d'interruption, reprendre aux épopées absentes de l'index.
 
@@ -94,6 +96,7 @@ Résumer les flows produits, le nombre d'écrans inventoriés, les retours vers 
 - Chaque écran porte un identifiant `EC` unique, partagé avec l'inventaire et utilisé comme identifiant de nœud ; pas deux identifiants pour le même écran, pas deux nœuds pour le même écran dans un flow
 - Chaque chemin mène à une fin explicite ou rejoint un autre chemin ; un identifiant de chemin désigne un seul chemin
 - Les stories d'autres épopées mobilisées par une tâche sont citées avec leur chemin complet, ou couvertes par un renvoi vers un flow existant
-- Les écrans sont nommés par leur rôle pour le persona (« Suivi du remboursement »), pas par leur mise en page
+- Les écrans sont nommés par leur rôle pour le persona (« Suivi de la demande »), pas par leur mise en page
 - Aucune story n'est modifiée ni créée sans accord explicite, à l'exception du lien ajouté dans leur section « User flows »
+- Niveau de détail comparable aux [exemples](./references/exemples.md), sans reprendre leur contenu
 - Langue des livrables : celle du brief

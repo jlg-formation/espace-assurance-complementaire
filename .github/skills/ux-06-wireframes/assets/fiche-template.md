@@ -13,8 +13,8 @@
 
 | # | Élément | Objet / contenu | Pourquoi à ce rang | Source |
 |---|---|---|---|---|
-| 1 | {Action principale : Envoyer une facture} | — | {tâche la plus fréquente de {Prénom}} | UF-{NN}.{FF} |
-| 2 | {Liste des remboursements récents} | Remboursement : date, acte, montant, statut | {...} | {inventaire, « Ce qui le bloque »} |
+| 1 | {Action principale : Envoyer une demande} | — | {tâche la plus fréquente de {Prénom}} | UF-{NN}.{FF} |
+| 2 | {Liste des demandes récentes} | Demande : objet, date, statut, délai | {...} | {inventaire, « Ce qui le bloque »} |
 
 **Replié, renvoyé ou supprimé** : {élément — décision et raison}
 
@@ -22,7 +22,7 @@
 
 | Action | Type | Cible | Flow et chemin |
 |---|---|---|---|
-| {Envoyer une facture} | {bouton principal / lien / navigation} | `vers="EC{NN}"` [fiche](./EC{NN}-{ecran}.wireframe.md) | UF-{NN}.{FF} `HP` |
+| {Envoyer une demande} | {bouton principal / lien / navigation} | `vers="EC{NN}"` [fiche](./EC{NN}-{ecran}.wireframe.md) | UF-{NN}.{FF} `HP` |
 
 ## États
 
@@ -44,7 +44,7 @@
 
 | Contenu ou action de l'inventaire | Présent | Où |
 |---|---|---|
-| {Remboursement : statut} | ✅ | {état nominal, liste} |
+| {Demande : statut} | ✅ | {état nominal, liste} |
 
 ## Retours
 

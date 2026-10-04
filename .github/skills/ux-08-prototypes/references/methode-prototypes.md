@@ -23,10 +23,10 @@ Tout autre écart de structure est un retour vers les wireframes : on corrige la
 
 ## 3. Jeu de données fictif
 Un seul jeu, `src/prototypes/donnees/donnees.ts`, lu par tous les écrans :
-- **Cohérence** : le remboursement affiché dans la liste est le même que dans le détail ; montant payé − montant remboursé = reste à payer ; les dates suivent l'ordre du parcours.
-- **Plausibilité** : actes, tarifs et délais réalistes pour le domaine (consultation, pharmacie, optique, dentaire...).
-- **Couverture des états** : un remboursement en attente, un refus, un bénéficiaire sans remboursement... de quoi rendre chaque état sans inventer de cas à part.
-- **Fiction** : prénom courant, nom manifestement fictif, aucun numéro de sécurité sociale, aucun IBAN ni adresse réels ; jamais un participant de la recherche.
+- **Cohérence** : la demande affichée dans la liste est la même que dans le détail ; une date de réponse suit la date d'envoi ; un total est la somme de ses lignes ; les dates suivent l'ordre du parcours.
+- **Plausibilité** : objets, montants et délais réalistes pour le domaine du projet.
+- **Couverture des états** : une demande en cours, une demande refusée, un compte sans historique... de quoi rendre chaque état sans inventer de cas à part.
+- **Fiction** : prénom courant, nom manifestement fictif, aucun identifiant officiel (numéro de sécurité sociale, fiscal...), aucun IBAN ni adresse réels ; jamais un participant de la recherche.
 
 Les données sont typées : une incohérence de forme ne compile pas.
 
@@ -48,7 +48,7 @@ Ce contrôle prépare un audit RGAA ; il n'en tient pas lieu.
 - **Format** : modéré, à distance ou en présentiel, 30 à 45 minutes, en pensant à voix haute.
 - **Participants** : 5 par profil de persona suffisent à révéler l'essentiel des problèmes d'un parcours (Nielsen) ; recruter hors de l'équipe et hors des participants de la recherche si possible.
 - **Consentement** : information sur l'enregistrement, finalité, durée de conservation, droit de retrait (RGPD) ; aucune donnée personnelle réelle saisie dans le prototype.
-- **Scénarios** : une situation, avec les mots du persona, sans les libellés de l'interface (« Votre fille a eu une ordonnance, vous voulez savoir si la pharmacie est remboursée »). Une tâche par parcours `Must` du MVP.
+- **Scénarios** : une situation, avec les mots du persona, sans les libellés de l'interface (« Vous venez de déménager, vous voulez que votre nouvelle adresse soit prise en compte »). Une tâche par parcours `Must` du MVP.
 - **Départ** : l'adresse en mode test du premier écran du parcours (`/#/test/ECNN`).
 - **Mesures** : réussite (sans aide / avec aide / échec), temps, erreurs, facilité perçue après chaque tâche (question unique, échelle de 1 à 7), verbatims.
 - **Analyse** : un problème = constat + gravité (bloquant, majeur, mineur) + écran + piste ; les problèmes alimentent les retours vers les skills concernés.

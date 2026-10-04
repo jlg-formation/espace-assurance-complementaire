@@ -6,9 +6,9 @@ Ouvrir : `cd web; bun run dev`, puis `/#/prototypes` (revue) ou `/#/test/EC{NN}`
 
 ## Jeu de données fictif
 
-- **Adhérent** : {prénom, nom fictif, situation reprise du persona [{Prénom}](../02-persona/{NN}-{prenom}.persona.md)}
+- **Utilisateur** : {prénom, nom fictif, situation reprise du persona [{Prénom}](../02-persona/{NN}-{prenom}.persona.md)}
 - **Foyer et contrats** : {...}
-- **Historique** : {remboursements, documents... et les états qu'ils permettent de montrer}
+- **Historique** : {demandes, documents... et les états qu'ils permettent de montrer}
 
 ## Écrans
 
@@ -16,7 +16,7 @@ Ouvrir : `cd web; bun run dev`, puis `/#/prototypes` (revue) ou `/#/test/EC{NN}`
 
 | ID | Écran | Zone | Version | Prototype | États | Écarts au wireframe | Statut |
 |---|---|---|---|---|---|---|---|
-| EC{NN} | {nom de l'inventaire} | {zone} | {MVP} | [tsx](../../web/src/prototypes/ecrans/{NN}-{zone}/EC{NN}-{ecran}.tsx) | {nominal, vide} | {— / fusion `LigneMontant` / ...} | {prévu / terminé / incomplet : raison} |
+| EC{NN} | {nom de l'inventaire} | {zone} | {MVP} | [tsx](../../web/src/prototypes/ecrans/{NN}-{zone}/EC{NN}-{ecran}.tsx) | {nominal, vide} | {— / fusion `LigneDemande` / ...} | {prévu / terminé / incomplet : raison} |
 
 ## Parcours
 

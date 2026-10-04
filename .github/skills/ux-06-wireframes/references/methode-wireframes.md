@@ -11,7 +11,7 @@ Un wireframe trop soigné fait discuter de la couleur d'un bouton au lieu de sa 
 
 ## 2. Règles de la basse fidélité
 - **Niveaux de gris** uniquement, une seule police (celle du système), aucune image réelle : un emplacement d'image est un cadre barré (`Image`).
-- **Vrais contenus** : montants, dates, noms d'actes, noms de garanties plausibles (« Consultation généraliste — 26,50 € — remboursé 18,55 € »). Le faux texte (*lorem ipsum*) cache les problèmes de longueur et de compréhension ; il n'est toléré que pour un long texte de corps (`Texte`).
+- **Vrais contenus** : montants, dates, noms de produits ou de démarches plausibles (« Attestation annuelle — demandée le 3 sept. 2026 — réponse sous 5 jours »). Le faux texte (*lorem ipsum*) cache les problèmes de longueur et de compréhension ; il n'est toléré que pour un long texte de corps (`Texte`).
 - **Libellés du glossaire**, à la lettre : un libellé qui ne tient pas sur mobile est un retour vers l'architecture, pas une abréviation improvisée.
 - **Aucun choix graphique** : pas de couleur de marque, d'icônes décoratives ni d'effets. Une icône utile est un mot entre crochets (`[i]`, `[↓]`).
 - Le kit (`kit.tsx`, `wireframe.css`) porte toute la présentation : un écran n'a ni `className` ni `style`.
@@ -36,12 +36,12 @@ Un écran n'est pas qu'un état nominal. Passer en revue (d'après la « pile d'
 
 | État | Exemple | Quand le dessiner |
 |---|---|---|
-| Nominal | Liste des remboursements | Toujours |
-| Vide | Aucun remboursement pour l'instant | Liste ou tableau |
-| Premier usage | Première connexion, aucun bénéficiaire ajouté | Si un flow ou un scénario le prévoit |
-| Partiel | Remboursement en attente du régime obligatoire | Données incomplètes ou en cours |
-| Chargement | Envoi de la facture en cours | Traitement système visible par le persona |
-| Erreur | Facture illisible, session expirée | Chaque chemin `E` des flows qui passe par l'écran |
+| Nominal | Liste des demandes | Toujours |
+| Vide | Aucune demande pour l'instant | Liste ou tableau |
+| Premier usage | Première connexion, profil à compléter | Si un flow ou un scénario le prévoit |
+| Partiel | Demande en attente d'une pièce complémentaire | Données incomplètes ou en cours |
+| Chargement | Envoi du justificatif en cours | Traitement système visible par le persona |
+| Erreur | Justificatif illisible, session expirée | Chaque chemin `E` des flows qui passe par l'écran |
 
 Chaque chemin alternatif ou d'erreur des flows passe par un écran ou un état ; chaque scénario Gherkin qui décrit une réaction visible aussi. Un état sans chemin ni scénario est un retour « scénario manquant ».
 
@@ -75,7 +75,7 @@ La France impose le RGAA aux services publics et aux grandes entreprises ; la st
 - rubrique courante marquée `aria-current="page"` : passer `rubrique` à `Gabarit`.
 
 ## 9. Annotations
-Ce que le wireframe ne montre pas s'annote : comportement (« se replie au-delà de 3 éléments »), règle de gestion (« montant estimé tant que le régime obligatoire n'a pas payé »), origine des données, accessibilité, écart volontaire.
+Ce que le wireframe ne montre pas s'annote : comportement (« se replie au-delà de 3 éléments »), règle de gestion (« délai estimé tant que la demande n'est pas affectée »), origine des données, accessibilité, écart volontaire.
 
 Dans l'écran : `<Note n={1} />` près de l'élément. Dans la fiche : la description de la note 1. Chaque note a ses deux moitiés.
 

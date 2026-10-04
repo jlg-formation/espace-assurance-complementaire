@@ -6,8 +6,8 @@ Le story map se lit dans deux directions :
 - **De haut en bas** : sous chaque épopée, les stories, empilées par importance et découpées en versions (MVP, V2, Plus tard).
 
 Les épopées viennent des étapes des journey maps :
-- Regrouper les étapes proches de plusieurs personas (« Envoyer ses justificatifs » chez Sophie, « Transmettre une facture » chez Marc) en une seule activité.
-- Nommer l'épopée par un verbe, du point de vue de l'utilisateur : « Me faire rembourser », pas « Module remboursement » ni « Écran de suivi ».
+- Regrouper les étapes proches de plusieurs personas (« Envoyer ses justificatifs » chez Sophie, « Transmettre un document » chez Marc) en une seule activité.
+- Nommer l'épopée par un verbe, du point de vue de l'utilisateur : « Faire une demande », pas « Module demandes » ni « Écran de suivi ».
 - Une épopée partagée par plusieurs personas contient des stories rattachées à chacun d'eux.
 
 ## 2. Des opportunités aux stories
@@ -19,7 +19,7 @@ Les épopées viennent des étapes des journey maps :
 | Priorité d'amélioration | Un argument pour le MoSCoW et la version |
 | Implication pour la conception (persona) | Une story, ou un critère d'acceptation d'une story existante |
 
-Exemple : friction « Ne sait pas où en est son remboursement, appelle le service client » `[P02][P05]` → *En tant que Sophie, adhérente salariée, je veux savoir à quelle étape en est mon remboursement afin de ne plus avoir à appeler pour le savoir.*
+Exemple : friction « Ne sait pas où en est sa demande, appelle le service client » `[P02][P05]` → *En tant que Sophie, cliente pressée, je veux savoir à quelle étape en est ma demande afin de ne plus avoir à appeler pour le savoir.*
 
 **Exigences hors recherche** : une exigence qui demande une action du persona (donner son consentement) devient une story ⚪. Une exigence transverse (accessibilité, confidentialité, délai légal) n'est pas une story : elle va dans la section « Exigences transverses » du story map et dans les critères d'acceptation des stories concernées, car elle ne se livre ni ne se dessine seule.
 
@@ -27,7 +27,7 @@ Exemple : friction « Ne sait pas où en est son remboursement, appelle le servi
 **En tant que** {prénom du persona}, {rôle} **je veux** {action ou information} **afin de** {bénéfice}.
 
 - **En tant que** : le persona, pour garder en tête son comportement (aisance, contraintes, besoin d'humain).
-- **Je veux** : ce que le persona cherche à faire ou à savoir, sans solution d'interface (« savoir où en est mon remboursement », pas « voir une barre de progression »).
+- **Je veux** : ce que le persona cherche à faire ou à savoir, sans solution d'interface (« savoir où en est ma demande », pas « voir une barre de progression »).
 - **Afin de** : le bénéfice réel. Test : si « afin de » répète « je veux », le bénéfice manque.
 
 ## 4. INVEST
@@ -43,8 +43,8 @@ Exemple : friction « Ne sait pas où en est son remboursement, appelle le servi
 ## 5. Découper une story trop grosse
 Découper verticalement (chaque morceau apporte de la valeur), jamais par couche technique :
 - **Par chemin** : le cas nominal d'abord, les variantes ensuite.
-- **Par règle** : une règle de gestion par story (plafond, délai de carence, pièce manquante).
-- **Par donnée** : un type de dépense, de bénéficiaire ou de contrat à la fois.
+- **Par règle** : une règle de gestion par story (plafond, délai légal, pièce manquante).
+- **Par donnée** : un type de demande, de produit ou de client à la fois.
 - **Par canal ou contexte** : mobile d'abord, puis le reste, si la recherche le justifie.
 
 ## 6. MoSCoW et versions
@@ -61,23 +61,23 @@ Un `Must` hors MVP ou un `Could` dans le MVP est possible, mais doit être justi
 ## 7. Critères d'acceptation en Gherkin
 Rédiger en français (`Étant donné`, `Quand`, `Alors`, `Et`, `Mais`), avec `# language: fr` en première ligne du bloc pour que les outils Gherkin reconnaissent les mots-clés :
 - Au moins un scénario **nominal** et un scénario **d'erreur ou alternatif**.
-- Style **déclaratif** : décrire le comportement attendu, pas les clics. « Quand Sophie transmet sa facture », pas « Quand Sophie clique sur le bouton Envoyer ».
+- Style **déclaratif** : décrire le comportement attendu, pas les clics. « Quand Sophie transmet sa demande », pas « Quand Sophie clique sur le bouton Envoyer ».
 - Données concrètes et plausibles quand elles éclairent la règle (montants, délais).
-- Intégrer les contraintes non fonctionnelles quand elles s'appliquent : accessibilité, confidentialité des données de santé, consentement.
+- Intégrer les contraintes non fonctionnelles quand elles s'appliquent : accessibilité, confidentialité des données personnelles ou sensibles, consentement.
 
 ```gherkin
 # language: fr
-Scénario: Facture transmise avec succès
-  Étant donné que Sophie a une dépense de santé non remboursée
-  Quand elle transmet la facture correspondante
+Scénario: Demande transmise avec succès
+  Étant donné que Sophie a un justificatif à fournir
+  Quand elle transmet sa demande avec ce justificatif
   Alors elle reçoit la confirmation que sa demande est enregistrée
   Et elle connaît le délai de traitement prévu
 
-Scénario: Facture illisible
-  Étant donné que Sophie transmet une facture illisible
+Scénario: Justificatif illisible
+  Étant donné que Sophie transmet un justificatif illisible
   Quand la demande est vérifiée
-  Alors elle est informée que la facture n'est pas exploitable
-  Et elle peut en transmettre une nouvelle sans ressaisir sa demande
+  Alors elle est informée que le justificatif n'est pas exploitable
+  Et elle peut en transmettre un nouveau sans ressaisir sa demande
 ```
 
 ## 8. Niveau de confiance

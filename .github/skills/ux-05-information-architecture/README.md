@@ -8,11 +8,11 @@ Avoir lancé `/ux-04-user-flows` : flows et inventaire des écrans dans `docs/05
 ## Lancer
 ```
 /ux-05-information-architecture                    toutes les zones
-/ux-05-information-architecture espace adhérent    une seule zone
+/ux-05-information-architecture espace client      une seule zone
 ```
 
 ## Déroulé
-1. **Inventaire** : objets métier (contrat, remboursement...) et écrans, classés *lieu* ou *contextuel*.
+1. **Inventaire** : objets métier (compte, demande...) et écrans, classés *lieu* ou *contextuel*.
 2. **Vocabulaire** : les mots des personas, tirés de la recherche.
 3. **Esquisse** : zones, schéma d'organisation, rubriques, écrans de navigation manquants.
 4. **Validation** : il vous présente l'organisation et les arbitrages de libellés.
@@ -38,7 +38,7 @@ docs/06-architecture-information/
 | Rectangle gras | Rubrique de menu sans écran propre |
 | Pointillé gris | Écran hors MVP |
 | Fond jaune | Écran ajouté par l'architecture, absent des flows |
-| Cadre | Zone (site public, espace adhérent...) |
+| Cadre | Zone (site public, espace client...) |
 
 Les écrans *contextuels* (étapes, confirmations, erreurs) ne sont pas dans l'arbre : ils sont rattachés à leur écran parent dans l'inventaire.
 

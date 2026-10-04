@@ -13,6 +13,8 @@ Ce skill ne produit **pas** de personas issus de la recherche : il produit des *
 
 Ne rien rédiger à la seule lecture du brief : l'exploration avec l'utilisateur est obligatoire.
 
+**Exemples commentés** : [exemples](./references/exemples.md) — extraits remplis sur un projet fictif et paires ✅ / ❌. Les relire avant de restituer, de questionner et de rédiger, pour viser le même niveau de détail ; ne jamais recopier leur contenu.
+
 ## Procédure
 
 ### 0. Vérifier l'existant
@@ -83,4 +85,5 @@ Corriger ce qui peut l'être ; noter ce qui reste non conforme pour la clôture.
 - Les hypothèses portent le même identifiant (H1, H2...) dans les proto-personas et dans le plan de recherche
 - Chaque hypothèse risquée du plan de recherche est couverte par au moins une question du guide d'entretien
 - Le guide d'entretien porte sur les comportements passés et réels (« racontez la dernière fois que... »), pas sur des opinions ou des intentions (« utiliseriez-vous... »)
+- Niveau de détail comparable aux [exemples](./references/exemples.md), sans reprendre leur contenu
 - Langue des livrables : celle du brief

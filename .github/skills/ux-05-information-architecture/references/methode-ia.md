@@ -17,9 +17,9 @@ Avant de ranger les écrans, nommer les **objets** que le persona manipule (appr
 
 | Objet | Attributs utiles au persona | Relations | Actions | Écrans |
 |---|---|---|---|---|
-| Remboursement | date des soins, montant payé, montant remboursé, reste à charge, statut | une facture, un bénéficiaire, une garantie | consulter, contester | EC04, EC07 |
+| Demande | objet, date d'envoi, statut, délai estimé, réponse | des pièces jointes, un compte, un contrat | consulter, compléter, annuler | EC04, EC07 |
 
-Un objet qui apparaît dans beaucoup d'écrans est un bon candidat pour une rubrique (« Mes remboursements »). Un objet sans écran révèle un oubli.
+Un objet qui apparaît dans beaucoup d'écrans est un bon candidat pour une rubrique (« Mes demandes »). Un objet sans écran révèle un oubli.
 
 ## 3. Lieu ou contextuel
 | Type | Définition | Dans l'arborescence |
@@ -32,12 +32,12 @@ Test rapide : « Le persona peut-il vouloir y revenir demain sans refaire la tâ
 ## 4. Schémas d'organisation
 | Schéma | Principe | Quand l'utiliser |
 |---|---|---|
-| Par tâche | Rubriques = ce que le persona veut faire (« Me faire rembourser ») | Espace connecté, tâches fréquentes et bien identifiées |
-| Par objet | Rubriques = ce que le persona possède (« Mes contrats », « Mes remboursements ») | Espace connecté, consultation et suivi |
+| Par tâche | Rubriques = ce que le persona veut faire (« Faire une demande ») | Espace connecté, tâches fréquentes et bien identifiées |
+| Par objet | Rubriques = ce que le persona possède (« Mes contrats », « Mes demandes ») | Espace connecté, consultation et suivi |
 | Par audience | Rubriques = qui est le visiteur (« Particuliers », « Entreprises ») | Site public, publics aux besoins distincts |
-| Par sujet | Rubriques = thèmes (« Santé », « Prévoyance ») | Site public, offres et informations |
+| Par sujet | Rubriques = thèmes (« Offres », « Conseils ») | Site public, offres et informations |
 
-Les schémas exacts (alphabétique, chronologique) servent à l'intérieur d'une rubrique (liste des remboursements par date), rarement à la navigation.
+Les schémas exacts (alphabétique, chronologique) servent à l'intérieur d'une rubrique (liste des demandes par date), rarement à la navigation.
 
 Un schéma par zone, justifié par les personas et les flows : les épopées de `04-user-stories/` sont souvent un bon point de départ pour un schéma par tâche. Mélanger tâches et objets au même niveau rend les rubriques ambiguës.
 
@@ -51,12 +51,12 @@ Un schéma par zone, justifié par les personas et les flows : les épopées de 
 
 ```
 flowchart TD
-    subgraph z1["Espace adhérent"]
+    subgraph z1["Espace client"]
         EC10["EC10 · Accueil"]
-        r1["Mes soins"]:::rubrique
-        EC04["EC04 · Mes remboursements"]
+        r1["Mes démarches"]:::rubrique
+        EC04["EC04 · Mes demandes"]
         EC21["EC21 · Plan du site"]:::ajoutIa
-        EC15["EC15 · Mes bénéficiaires"]:::horsMvp
+        EC15["EC15 · Mes documents"]:::horsMvp
     end
     EC10 --> r1
     r1 --> EC04
@@ -83,13 +83,13 @@ flowchart TD
 ## 7. Systèmes de navigation
 | Système | Rôle | Exemple |
 |---|---|---|
-| Globale | Rubriques de premier niveau, présentes partout dans la zone | Menu principal de l'espace adhérent |
-| Locale | Sous-rubriques de la rubrique courante | Onglets « Remboursements / Factures envoyées » |
-| Contextuelle | Liens vers un lieu lié, au fil du contenu | « Voir la garantie appliquée » depuis un remboursement |
+| Globale | Rubriques de premier niveau, présentes partout dans la zone | Menu principal de l'espace client |
+| Locale | Sous-rubriques de la rubrique courante | Onglets « En cours / Terminées » |
+| Contextuelle | Liens vers un lieu lié, au fil du contenu | « Voir le contrat concerné » depuis une demande |
 | Utilitaire | Fonctions transverses | Compte, déconnexion, aide, contact, recherche |
 | Pied de page | Accès secondaires et obligatoires | Mentions légales, accessibilité, plan du site |
-| Fil d'Ariane | Situer le persona dans l'arbre | Accueil › Mes soins › Mes remboursements |
-| Lien profond | Arriver directement sur un lieu depuis l'extérieur | Notification « remboursement effectué » → EC04 |
+| Fil d'Ariane | Situer le persona dans l'arbre | Accueil › Mes démarches › Mes demandes |
+| Lien profond | Arriver directement sur un lieu depuis l'extérieur | Notification « demande traitée » → EC07 |
 
 **Mobile** : préciser comment la navigation globale se réduit (barre d'onglets, menu) d'après l'appareil principal des personas. Une barre d'onglets accepte 5 entrées au plus : les choisir parmi les tâches `Must` du MVP.
 
@@ -100,14 +100,14 @@ Pour chaque flow et **chacun de ses points d'entrée** : le chemin de navigation
 
 | Flow | Point d'entrée | Chemin | Clics | Verdict |
 |---|---|---|---|---|
-| UF-01.01 | Facture reçue chez le médecin | EC10 Accueil → nav. globale « Mes soins » → EC04 → bouton « Envoyer une facture » → EC05 | 2 | ✅ |
-| UF-01.02 | Notification « remboursement effectué » | Lien profond → connexion → EC07 | 0 | ✅ |
+| UF-01.01 | Courrier demandant un justificatif | EC10 Accueil → nav. globale « Mes démarches » → EC04 → bouton « Envoyer une demande » → EC05 | 2 | ✅ |
+| UF-01.02 | Notification « demande traitée » | Lien profond → connexion → EC07 | 0 | ✅ |
 
 Un flow sans chemin depuis l'un de ses points d'entrée est **bloquant**. Un chemin de plus de 3 clics pour une tâche `Must` est à justifier. Les transitions **à l'intérieur** d'un flow ne sont pas de la navigation : elles sont déjà dans le flow.
 
 ## 9. Nommage
-- Partir des mots du persona (verbatims, observations) : « remboursement » plutôt que « prestation », « ce qui me reste à payer » plutôt que « ticket modérateur ».
-- Un terme réglementaire inévitable (tiers payant, 100 % Santé, délai de carence) garde son nom, avec une définition courte accessible depuis l'écran.
+- Partir des mots du persona (verbatims, observations) : « ma demande » plutôt que « requête » ou « ticket », « où en est mon dossier » plutôt que « statut de traitement ».
+- Un terme réglementaire ou métier inévitable (délai de rétractation, pièce justificative, mandat) garde son nom, avec une définition courte accessible depuis l'écran.
 - Un libellé de navigation est court (1 à 3 mots), sans jargon, sans ambiguïté avec une autre rubrique.
 - Possessif (« Mes contrats ») dans l'espace connecté, neutre (« Nos offres ») sur le site public : garder la même convention dans toute une zone.
 - Niveau de confiance d'un libellé : 🟢 verbatim de plusieurs participants, 🟡 un participant ou une source indirecte, ⚪ hypothèse.
@@ -119,7 +119,7 @@ Un flow sans chemin depuis l'un de ses points d'entrée est **bloquant**. Un che
 | Test d'arborescence (*tree testing*) | Si les utilisateurs trouvent un contenu dans l'arbre, sans interface | Après l'arborescence, avant les wireframes |
 
 Ce skill produit le **protocole** du test d'arborescence ; il ne le mène pas. Les questions :
-- partent des tâches des flows, formulées comme le persona les dirait (« Vous avez payé votre dentiste, vous voulez savoir combien on vous rendra ») ;
+- partent des tâches des flows, formulées comme le persona les dirait (« Vous avez envoyé un dossier la semaine dernière, vous voulez savoir s'il avance ») ;
 - n'emploient jamais un libellé de l'arborescence (sinon le test mesure la correspondance des mots, pas la compréhension) ;
 - ont une ou plusieurs réponses correctes dans l'arbre.
 

@@ -8,13 +8,13 @@ Avoir terminé `/ux-07-design-system` : `bun run verifier` passe, chaque composa
 ## Lancer
 ```
 /ux-08-prototypes                     tous les écrans
-/ux-08-prototypes espace adhérent     une zone
+/ux-08-prototypes espace client       une zone
 /ux-08-prototypes EC04                un écran
 ```
 
 ## Déroulé
 1. **Préparation** : section prototypes ajoutée à l'application, index.
-2. **Jeu de données fictif** : un adhérent et son historique, cohérents sur tous les écrans.
+2. **Jeu de données fictif** : un utilisateur et son historique, cohérents sur tous les écrans.
 3. **Validation** : jeu de données, ordre, parcours à tester.
 4. **Prototypage**, un écran à la fois : copie du wireframe, import passé au design system, vrais contenus.
 5. **Accessibilité** : clavier seul, zoom 200 %, mobile, audit automatique si disponible.
@@ -31,7 +31,7 @@ docs/09-prototypes/
 
 web/
 ├── src/prototypes/donnees/            donnees.ts (jeu fictif), formats.ts (montants, dates)
-├── src/prototypes/ecrans/02-espace-adherent/EC04-suivi-des-remboursements.tsx
+├── src/prototypes/ecrans/02-espace-client/EC04-suivi-des-demandes.tsx
 ├── src/prototypes/registre.ts
 └── tests/prototypes.test.tsx
 ```

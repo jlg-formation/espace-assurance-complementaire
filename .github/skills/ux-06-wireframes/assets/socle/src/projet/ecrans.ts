@@ -12,8 +12,8 @@ export interface FicheEcran {
 }
 
 export const ecrans = {
-  EC04: { nom: 'Suivi des remboursements', libelle: 'Mes remboursements', zone: 'espace-adherent', type: 'lieu', version: 'MVP' },
-  EC05: { nom: "Envoi d'une facture", libelle: 'Envoyer une facture', zone: 'espace-adherent', type: 'contextuel', parent: 'EC04', version: 'MVP' },
+  EC04: { nom: 'Suivi des demandes', libelle: 'Mes demandes', zone: 'espace-client', type: 'lieu', version: 'MVP' },
+  EC05: { nom: "Envoi d'une demande", libelle: 'Envoyer une demande', zone: 'espace-client', type: 'contextuel', parent: 'EC04', version: 'MVP' },
 } as const satisfies Record<string, FicheEcran>;
 
 export type EcranId = keyof typeof ecrans;

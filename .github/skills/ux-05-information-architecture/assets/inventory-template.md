@@ -6,7 +6,7 @@
 
 | Objet | Attributs utiles au persona | Relations | Actions | Écrans | Stories |
 |---|---|---|---|---|---|
-| {Remboursement} | {date des soins, montant remboursé, reste à charge, statut} | {facture, bénéficiaire, garantie} | {consulter, contester} | EC04, EC07 | US-01.02 |
+| {Demande} | {objet, date d'envoi, statut, délai estimé} | {pièce jointe, compte, contrat} | {consulter, compléter, annuler} | EC04, EC07 | US-01.02 |
 
 ## Écrans
 
@@ -15,7 +15,7 @@
 
 | ID | Écran | Type | Parent | Zone | Objets et contenus | Actions | Personas | Version | Appareil | Origine |
 |---|---|---|---|---|---|---|---|---|---|---|
-| <a id="ec01"></a>[EC01](../05-user-flows/00-index.md#ec01) | {nom de l'inventaire des flows} | {lieu / contextuel} | {— / EC04} | {zone} | {Remboursement : liste, statut ; Facture : date} | {filtrer, ouvrir un remboursement} | {Prénom} | {MVP} | {mobile} | {UF-01.02} |
+| <a id="ec01"></a>[EC01](../05-user-flows/00-index.md#ec01) | {nom de l'inventaire des flows} | {lieu / contextuel} | {— / EC04} | {zone} | {Demande : liste, statut ; Pièce jointe : nom} | {filtrer, ouvrir une demande} | {Prénom} | {MVP} | {mobile} | {UF-01.02} |
 
 ## Objets sans écran
 - {objet} — {oubli à signaler en retour, ou raison}

@@ -26,7 +26,7 @@ Ouvrir la documentation : `cd web; bun run dev`, puis `/#/design-system`. Vérif
 
 | Motif | Écrans | Proposition | Décision |
 |---|---|---|---|
-| {Deux présentations d'un montant remboursé} | {EC04, EC07} | {fusionner en `LigneMontant`} | {validée / refusée} |
+| {Deux présentations du statut d'une demande} | {EC04, EC07} | {fusionner en `LigneDemande`} | {validée / refusée} |
 
 ## Correspondance avec le kit
 
@@ -36,7 +36,7 @@ Ouvrir la documentation : `cd web; bun run dev`, puis `/#/design-system`. Vérif
 |---|---|---|---|
 | `Bouton` | `Bouton` | `wf-btn` → `ds-btn` | — |
 | `Note` | `Note` | — | Ne rend rien : annotation de wireframe |
-| `Ligne` + `Lien` + `Etiquette` | `LigneMontant` | `ds-ligne-montant` | {Fusion validée} |
+| `Ligne` + `Lien` + `Etiquette` | `LigneDemande` | `ds-ligne-demande` | {Fusion validée} |
 
 ## Bilan
 

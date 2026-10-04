@@ -22,11 +22,11 @@ Avoir lancé `/ux-02-research-synthesis` : personas fondés et journey maps dans
 ```
 docs/04-user-stories/
 ├── 00-story-map.md                              vue d'ensemble + inventaire des opportunités
-├── 01-me-faire-rembourser/
-│   ├── 00-me-faire-rembourser.epic.md           l'épopée et la liste de ses stories
-│   ├── 01-envoyer-une-facture.story.md          US-01.01
-│   └── 02-suivre-mon-remboursement.story.md     US-01.02
-└── 02-comprendre-mes-garanties/
+├── 01-faire-une-demande/
+│   ├── 00-faire-une-demande.epic.md             l'épopée et la liste de ses stories
+│   ├── 01-envoyer-une-demande.story.md          US-01.01
+│   └── 02-suivre-ma-demande.story.md            US-01.02
+└── 02-gerer-mon-compte/
     └── ...
 ```
 

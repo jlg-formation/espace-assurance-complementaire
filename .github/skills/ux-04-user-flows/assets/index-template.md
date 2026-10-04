@@ -20,7 +20,7 @@
 
 | Élément | Type | Flows |
 |---|---|---|
-| {Notification « remboursement effectué »} | {entrée / sortie} | UF-01.02 |
+| {Notification « demande traitée »} | {entrée / sortie} | UF-01.02 |
 
 ## Retours vers le backlog (consolidés)
 

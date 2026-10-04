@@ -16,7 +16,7 @@
 
 | Sujet | Décision | Justification |
 |---|---|---|
-| Zones | {Site public, Espace adhérent, Transverse} | {vision, personas} |
+| Zones | {Site public, Espace client, Transverse} | {vision, personas} |
 | Schéma — {zone} | {par tâche / par objet / par audience / par sujet} | {constat persona ou flow} |
 | Rubriques de premier niveau — {zone} | {libellés} | {...} |
 | {Arbitrage de libellé ou de rattachement} | {...} | {...} |
@@ -25,7 +25,7 @@
 
 | ID | Écran | Type | Raison |
 |---|---|---|---|
-| [EC{NN}](../05-user-flows/00-index.md#ec{nn}) | {Accueil de l'espace adhérent} | lieu | {aucun flow ne le nomme, point d'arrivée après connexion} |
+| [EC{NN}](../05-user-flows/00-index.md#ec{nn}) | {Accueil de l'espace client} | lieu | {aucun flow ne le nomme, point d'arrivée après connexion} |
 
 ## Bilan
 

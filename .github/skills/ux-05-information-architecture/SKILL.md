@@ -1,7 +1,7 @@
 ---
 name: ux-05-information-architecture
 description: "Phase 5 de la démarche UX : construit l'architecture de l'information à partir de l'inventaire des écrans des user flows. Produit l'inventaire des contenus et des objets métier, l'arborescence (sitemap Mermaid), les systèmes de navigation, le glossaire des libellés tiré du vocabulaire des personas, et le protocole de test d'arborescence. Vérifie que chaque écran est placé et que chaque flow est atteignable. À lancer après ux-04-user-flows."
-argument-hint: "Optionnel : zone à traiter (ex : espace adhérent)"
+argument-hint: "Optionnel : zone à traiter (ex : espace client)"
 disable-model-invocation: true
 ---
 
@@ -11,9 +11,11 @@ disable-model-invocation: true
 
 L'architecture de l'information organise et nomme les contenus pour que chaque persona trouve ce qu'il cherche et comprenne où il est. Les flows disent **comment** on accomplit une tâche ; l'architecture dit **où** se trouvent les écrans, **comment on y arrive** et **comment ils s'appellent**.
 
-Tout part de l'inventaire des écrans de `ux-04-user-flows` : chaque écran est soit placé dans l'arborescence, soit rattaché à l'écran qui l'ouvre. Les libellés viennent du vocabulaire des personas, pas de celui de l'assureur.
+Tout part de l'inventaire des écrans de `ux-04-user-flows` : chaque écran est soit placé dans l'arborescence, soit rattaché à l'écran qui l'ouvre. Les libellés viennent du vocabulaire des personas, pas de celui de l'organisation.
 
 Méthode détaillée : [méthode de l'architecture de l'information](./references/methode-ia.md).
+
+**Exemples commentés** : [exemples](./references/exemples.md) — inventaire, arborescence, vérification par flow, libellés et questions de test remplis sur un projet fictif, et paires ✅ / ❌. Les relire avant d'inventorier et de rédiger ; ne jamais recopier leur contenu.
 
 ## Prérequis
 - Livrables de `ux-04-user-flows` : `docs/05-user-flows/00-index.md` (inventaire des écrans, points d'entrée) et les `.flow.md`.
@@ -32,7 +34,7 @@ Si `docs/06-architecture-information/` contient déjà des livrables, demander s
 
 ### 1. Inventorier les objets et les contenus
 Créer `docs/06-architecture-information/00-index.md` selon [le modèle d'index](./assets/index-template.md), puis `01-contenus.inventory.md` selon [le modèle d'inventaire](./assets/inventory-template.md).
-- **Objets métier** : relever dans les stories et les flows les objets que manipulent les personas (contrat, garantie, remboursement, facture, bénéficiaire, document...). Pour chacun : attributs utiles au persona, relations avec les autres objets, actions possibles, écrans où il apparaît.
+- **Objets métier** : relever dans les stories et les flows les objets que manipulent les personas (compte, contrat, commande, demande, document...). Pour chacun : attributs utiles au persona, relations avec les autres objets, actions possibles, écrans où il apparaît.
 - **Écrans** : reprendre l'inventaire de `05-user-flows/00-index.md`, **un écran à la fois**, sans changer ni son identifiant ni son nom. Pour chacun : type (*lieu* ou *contextuel*, voir la méthode), parent s'il est contextuel, objets et contenus affichés (tirés des « Étapes du happy path » des flows), actions, personas, version (la plus précoce de ses stories), appareil principal.
 
 Consigner chaque écran dans l'inventaire aussitôt traité. En cas d'interruption, reprendre aux écrans absents.
@@ -100,4 +102,5 @@ Résumer les zones, les rubriques, le nombre d'écrans par type et par version, 
 - Les écrans ajoutés par l'architecture sont identifiés `origine IA` dans l'inventaire des flows
 - Les questions du test d'arborescence n'emploient pas les libellés de l'arborescence ; aucun résultat n'est inventé
 - Aucun flow ni aucune story n'est modifié sans accord explicite, à l'exception de l'ajout des écrans validés à l'inventaire
+- Niveau de détail comparable aux [exemples](./references/exemples.md), sans reprendre leur contenu
 - Langue des livrables : celle du brief

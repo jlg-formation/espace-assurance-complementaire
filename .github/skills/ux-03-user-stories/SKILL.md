@@ -13,6 +13,8 @@ Les stories naissent des parcours, pas d'une liste de fonctionnalités. Chaque �
 
 Méthode détaillée : [méthode des user stories](./references/methode-stories.md).
 
+**Exemples commentés** : [exemples](./references/exemples.md) — opportunités, épopée, story complète avec Gherkin et MoSCoW sur un projet fictif, et paires ✅ / ❌. Les relire avant d'esquisser et de rédiger ; ne jamais recopier leur contenu.
+
 ## Prérequis
 - Livrables de `ux-02-research-synthesis` : `docs/02-persona/*.persona.md`, `docs/03-customer-journey-map/*.cjm.md`, `docs/research/synthese.md`.
 - `docs/01-vision.md` pour le périmètre et les contraintes.
@@ -34,15 +36,15 @@ Traiter **un persona à la fois** : lire sa fiche puis sa journey map, et releve
 
 Consigner aussitôt chaque élément dans la section « Inventaire des opportunités » de `docs/04-user-stories/00-story-map.md` (créé selon [le modèle de story map](./assets/story-map-template.md)), avec un identifiant `O01`, `O02`... En cas d'interruption, reprendre aux personas absents de l'inventaire.
 
-Relever ensuite dans la vision les exigences qui ne viennent pas de la recherche (réglementaire, RGPD, données de santé, accessibilité, métier) et les trier :
-- **exigence qui demande une action du persona** (donner son consentement, choisir un bénéficiaire) : l'ajouter à l'inventaire avec la source `vision` ou `contrainte` ; elle deviendra une story ;
+Relever ensuite dans la vision les exigences qui ne viennent pas de la recherche (réglementaire, RGPD, données sensibles, accessibilité, métier) et les trier :
+- **exigence qui demande une action du persona** (donner son consentement, désigner un mandataire) : l'ajouter à l'inventaire avec la source `vision` ou `contrainte` ; elle deviendra une story ;
 - **exigence transverse** (accessibilité, confidentialité, délais légaux) : la consigner dans la section « Exigences transverses » du story map ; elle sera reprise dans les critères d'acceptation des stories concernées, sans devenir une story.
 
 Comparer enfin les parcours du périmètre de la vision (sections « Périmètre » et « Parcours à cartographier ») aux parcours des journey maps. Consigner chaque parcours sans journey map dans la section « Couverture du périmètre » du story map.
 
 ### 2. Construire la colonne vertébrale
 À partir de l'inventaire uniquement :
-- Regrouper les étapes des journey maps, tous personas confondus, en épopées (repère : **5 à 9** ; justifier un écart dans le story map) : des activités utilisateur nommées par un verbe (« Me faire rembourser »), jamais par un écran ou un module.
+- Regrouper les étapes des journey maps, tous personas confondus, en épopées (repère : **5 à 9** ; justifier un écart dans le story map) : des activités utilisateur nommées par un verbe (« Faire une demande »), jamais par un écran ou un module.
 - Les ordonner selon le déroulé du parcours : cet ordre donne leur numéro.
 
 ### 3. Esquisser les stories
@@ -67,7 +69,7 @@ Traiter **une épopée à la fois**, dans `docs/04-user-stories/` :
 - `NN-<epopee>/SS-<story>.story.md` : un fichier par story selon [le modèle de story](./assets/story-template.md). Identifiant `US-NN.SS` (numéro d'épopée, numéro de story). Intégrer aux critères d'acceptation les exigences transverses qui la concernent.
 - Mettre à jour `00-story-map.md` : colonne vertébrale (à partir de l'esquisse validée), versions, liens vers les fichiers.
 
-Nommage : numéros à deux chiffres, noms courts en minuscules sans accents, verbe à l'infinitif (ex : `01-me-faire-rembourser/02-suivre-mon-remboursement.story.md`). Le numéro d'une story est un identifiant stable : une story ajoutée plus tard prend le prochain numéro libre, et l'ordre de lecture reste celui du story map. Les stories `Won't` ne sont pas rédigées : elles sont listées dans la section « Écartées » du story map avec leur raison.
+Nommage : numéros à deux chiffres, noms courts en minuscules sans accents, verbe à l'infinitif (ex : `01-faire-une-demande/02-suivre-ma-demande.story.md`). Le numéro d'une story est un identifiant stable : une story ajoutée plus tard prend le prochain numéro libre, et l'ordre de lecture reste celui du story map. Les stories `Won't` ne sont pas rédigées : elles sont listées dans la section « Écartées » du story map avec leur raison.
 
 Une fois toutes les épopées rédigées, ajouter dans `01-vision.md` un lien vers le story map.
 
@@ -87,7 +89,7 @@ Résumer les épopées, le nombre de stories par version et par priorité, les s
 
 ## Critères de qualité
 - Chaque story est traçable jusqu'à une opportunité de l'inventaire, elle-même rattachée à une étape de journey map et à des sources ; sinon elle est marquée ⚪ avec sa source (`vision`, `contrainte`)
-- « En tant que » nomme le persona et son rôle (« En tant que Sophie, adhérente salariée »), jamais « l'utilisateur »
+- « En tant que » nomme le persona et son rôle (« En tant que Sophie, cliente pressée »), jamais « l'utilisateur »
 - « Afin de » exprime un bénéfice pour le persona, pas une fonctionnalité
 - Chaque story respecte INVEST (indépendante, négociable, valorisable, estimable, petite, testable)
 - Chaque story a des critères d'acceptation Gherkin : au moins un scénario nominal et un scénario d'erreur ou alternatif
@@ -96,4 +98,5 @@ Résumer les épopées, le nombre de stories par version et par priorité, les s
 - Les exigences transverses ne sont pas des stories : elles figurent dans la section dédiée du story map et dans les critères d'acceptation des stories concernées
 - Chaque parcours du périmètre de la vision a une journey map, ou la décision prise à son sujet (stories ⚪, retour à ux-02, exclusion) est consignée dans le story map
 - MoSCoW et version sont choisis indépendamment ; toute story `Must` placée hors MVP est justifiée
+- Niveau de détail comparable aux [exemples](./references/exemples.md), sans reprendre leur contenu
 - Langue des livrables : celle du brief

@@ -3,13 +3,13 @@
 <!-- Protocole produit par ux-08. Les résultats ne sont jamais simulés. -->
 
 ## Objectifs
-- {Vérifier qu'un adhérent envoie une facture et sait quand il sera remboursé, sans aide.}
+- {Vérifier qu'un client envoie une demande et sait quand elle sera traitée, sans aide.}
 - {...}
 
 ## Participants
 | Profil | Persona | Nombre | Critères de recrutement |
 |---|---|---|---|
-| {Adhérent actif, à l'aise sur mobile} | [{Prénom}](../02-persona/{NN}-{prenom}.persona.md) | {5} | {âge, situation, aisance numérique, exclusions} |
+| {Client actif, à l'aise sur mobile} | [{Prénom}](../02-persona/{NN}-{prenom}.persona.md) | {5} | {âge, situation, aisance numérique, exclusions} |
 
 ## Déroulé
 - **Format** : {modéré, à distance / en présentiel}, {30 à 45} minutes, en pensant à voix haute
@@ -24,7 +24,7 @@
 
 | # | Scénario lu au participant | Flow | Départ | Réussite si | Écrans attendus |
 |---|---|---|---|---|---|
-| T1 | {Vous sortez de chez le médecin avec une feuille de soins. Vous voulez être remboursée le plus vite possible.} | [UF-{NN}.{FF}](../05-user-flows/{NN}-{epopee}/{FF}-{tache}.flow.md) | `/#/test/EC{NN}` | {la facture est envoyée et le participant sait où suivre son remboursement} | {EC{NN} → EC{NN} → EC{NN}} |
+| T1 | {Vous venez de déménager. Vous voulez que votre nouvelle adresse soit prise en compte le plus vite possible.} | [UF-{NN}.{FF}](../05-user-flows/{NN}-{epopee}/{FF}-{tache}.flow.md) | `/#/test/EC{NN}` | {la demande est envoyée et le participant sait où suivre son avancement} | {EC{NN} → EC{NN} → EC{NN}} |
 
 ## Mesures
 - Réussite par tâche : sans aide / avec aide / échec

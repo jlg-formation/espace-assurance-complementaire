@@ -16,7 +16,7 @@
 
 | # | Question | Persona | Flow | Réponse(s) attendue(s) | Chemin attendu |
 |---|---|---|---|---|---|
-| Q1 | {Vous avez payé votre dentiste, vous voulez savoir combien on vous rendra.} | {Prénom} | [UF-01.02](../05-user-flows/01-{epopee}/02-{tache}.flow.md) | EC07 | {Accueil › Mes soins › Mes remboursements} |
+| Q1 | {Vous avez envoyé un dossier la semaine dernière, vous voulez savoir s'il avance.} | {Prénom} | [UF-01.02](../05-user-flows/01-{epopee}/02-{tache}.flow.md) | EC07 | {Accueil › Mes démarches › Mes demandes} |
 
 ## Résultats
 

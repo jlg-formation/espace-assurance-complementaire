@@ -8,7 +8,7 @@ Ouvrir la galerie : `cd web; bun run dev`, puis `/#/wireframes`. Vérifier : `bu
 
 | Zone | Adresse | Navigation mobile | Statut |
 |---|---|---|---|
-| {Espace adhérent} | `/#/wireframes/gabarit/{zone}` | {onglets / liste} | {prévu / validé} |
+| {Espace client} | `/#/wireframes/gabarit/{zone}` | {onglets / liste} | {prévu / validé} |
 
 ## Écrans
 
@@ -32,7 +32,7 @@ Ouvrir la galerie : `cd web; bun run dev`, puis `/#/wireframes`. Vérifier : `bu
 |---|---|---|---|---|---|
 | {zone} | {n} | {n} | {n} | {n} | {n} |
 
-**Composants récurrents** (entrée du design system) : {liste de remboursements, carte de contrat, champ de dépôt de fichier, alerte d'erreur...}
+**Composants récurrents** (entrée du design system) : {liste de demandes, carte de contrat, champ de dépôt de fichier, alerte d'erreur...}
 
 ## Retours
 

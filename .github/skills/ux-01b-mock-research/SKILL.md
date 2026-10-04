@@ -11,6 +11,8 @@ disable-model-invocation: true
 
 **Ce skill est une simulation.** Il fabrique des données de recherche plausibles à la place d'une vraie collecte, pour aller plus vite. Les données produites ne décrivent aucune personne réelle et ne valent pas preuve. Toutes portent un bandeau d'avertissement et le préfixe `SIM-`.
 
+**Exemples commentés** : [exemples](./references/exemples.md) — extraits simulés réalistes et paires ✅ / ❌. Les relire avant de générer, pour viser le même réalisme ; ne jamais recopier leur contenu.
+
 ## Prérequis
 Livrables de `ux-01-discovery` : `docs/01-vision.md`, `docs/02-persona/proto/*.proto-persona.md`, `docs/research/plan-de-recherche.md`, `docs/research/guide-entretien.md`.
 
@@ -65,3 +67,4 @@ Résumer le panel et les fichiers générés, rappeler qu'il s'agit d'une simula
 - Aucune statistique fictive n'est attribuée à un organisme réel (pas de « selon l'INSEE »), aucun avis n'est attribué à une plateforme réelle
 - Les données ne sont pas « trop propres » : contradictions, hors-sujets, réponses vagues, comportements qui contredisent les propos
 - Comme dans une vraie recherche, certaines hypothèses du plan sont confirmées, d'autres nuancées ou contredites
+- Réalisme comparable aux [exemples](./references/exemples.md), sans reprendre leur contenu

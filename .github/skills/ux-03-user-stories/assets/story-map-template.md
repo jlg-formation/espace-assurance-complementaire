@@ -31,7 +31,7 @@
 
 | Exigence | Source | Stories concernées |
 |---|---|---|
-| {ex : données de santé visibles par l'adhérent seul} | {vision / contrainte} | {US-01.01, US-02.03} |
+| {ex : données personnelles visibles par le titulaire du compte seul} | {vision / contrainte} | {US-01.01, US-02.03} |
 
 ## Couverture du périmètre
 

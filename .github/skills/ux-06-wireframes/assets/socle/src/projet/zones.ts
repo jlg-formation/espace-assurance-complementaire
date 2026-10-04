@@ -3,7 +3,7 @@
 import type { EcranId } from './ecrans';
 
 // Liste déclarée à part pour éviter une référence circulaire de types avec ecrans.ts.
-export const idsZones = ['espace-adherent'] as const;
+export const idsZones = ['espace-client'] as const;
 export type ZoneId = (typeof idsZones)[number];
 
 export interface EntreeNav {
@@ -22,10 +22,10 @@ export interface Zone {
 }
 
 export const zones: Record<ZoneId, Zone> = {
-  'espace-adherent': {
-    nom: 'Espace adhérent',
+  'espace-client': {
+    nom: 'Espace client',
     accueil: 'EC04',
-    navigationGlobale: [{ libelle: 'Mes remboursements', vers: 'EC04', rubrique: 'mes-soins' }],
+    navigationGlobale: [{ libelle: 'Mes demandes', vers: 'EC04', rubrique: 'mes-demarches' }],
     navigationMobile: 'onglets',
     utilitaire: [],
     pied: [],

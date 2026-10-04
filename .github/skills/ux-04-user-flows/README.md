@@ -23,10 +23,10 @@ Avoir lancé `/ux-03-user-stories` : story map, épopées et stories dans `docs/
 ```
 docs/05-user-flows/
 ├── 00-index.md                                  index des flows, inventaire des écrans EC01..., retours backlog
-├── 01-me-faire-rembourser/
-│   ├── 01-envoyer-une-facture.flow.md           UF-01.01
-│   └── 02-comprendre-un-remboursement.flow.md   UF-01.02
-└── 02-comprendre-mes-garanties/
+├── 01-faire-une-demande/
+│   ├── 01-envoyer-une-demande.flow.md           UF-01.01
+│   └── 02-suivre-ma-demande.flow.md             UF-01.02
+└── 02-gerer-mon-compte/
     └── ...
 ```
 

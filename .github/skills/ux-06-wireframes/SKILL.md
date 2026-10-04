@@ -1,7 +1,7 @@
 ---
 name: ux-06-wireframes
 description: "Phase 6 de la démarche UX : produit les wireframes basse fidélité de tous les écrans de l'inventaire dans une application Bun + Vite + TypeScript + React (web/), en niveaux de gris, cliquables selon les user flows (wireflow), avec une fiche d'annotations Markdown par écran. Applique l'arborescence, la navigation et les libellés de l'architecture de l'information. Tests automatiques : inventaire couvert, un titre par état, chaque happy path cliquable. À lancer après ux-05-information-architecture."
-argument-hint: "Optionnel : zone ou écran à traiter (ex : espace adhérent, EC04)"
+argument-hint: "Optionnel : zone ou écran à traiter (ex : espace client, EC04)"
 disable-model-invocation: true
 ---
 
@@ -14,6 +14,8 @@ Un wireframe basse fidélité fixe **ce qu'il y a sur l'écran et dans quel ordr
 Chaque écran de l'inventaire devient un composant React construit avec un **kit de wireframes** en niveaux de gris, avec de vrais contenus et les libellés du glossaire. Les écrans sont reliés selon les flows : on parcourt chaque happy path en cliquant, sur mobile comme sur ordinateur. Le kit partage son contrat avec le futur design system : un écran passera du wireframe au prototype en changeant son import.
 
 Méthodes : [méthode des wireframes](./references/methode-wireframes.md) · [socle web](./references/socle-web.md).
+
+**Exemples commentés** : [exemples](./references/exemples.md) — fiche d'écran remplie, parcours déclaré, code d'écran correct et incorrect ; les écrans EC04 et EC05 du socle sont des wireframes complets. Les relire avant de maquetter ; ne jamais recopier leur contenu.
 
 ## Prérequis
 - Livrables de `ux-05-information-architecture` : `docs/06-architecture-information/` (inventaire des contenus, arborescence, navigation, glossaire).
@@ -95,11 +97,12 @@ Résumer le nombre d'écrans maquettés par zone et par version, les parcours cl
 - Chaque chemin alternatif ou d'erreur des flows a son écran ou son état
 - Basse fidélité tenue : le kit seul donne la présentation (niveaux de gris, une police, aucune image réelle) ; les écrans n'ont ni `className` ni `style`
 - Les fichiers copie conforme du socle sont identiques aux assets du skill
-- Contenus réels et plausibles (montants, dates, noms d'actes), pas de faux texte, sauf `Texte` pour un long texte de corps
+- Contenus réels et plausibles (montants, dates, noms de produits ou de démarches), pas de faux texte, sauf `Texte` pour un long texte de corps
 - Libellés identiques au glossaire ; `ecrans.ts`, `zones.ts` et `parcours.ts` fidèles à l'inventaire, à la navigation et aux flows
 - Mobile d'abord : la hiérarchie du contenu est pensée pour l'appareil principal du persona, et chaque écran reste lisible à 375 px et à 1280 px
 - Accessibilité dès le wireframe : un seul `h1` par état, titres hiérarchisés, champs étiquetés, `vers` pour naviguer et bouton sans `vers` pour agir, aucune information portée par la seule couleur
 - Aucune dépendance hors socle, aucune ressource externe, aucun appel réseau
 - Chaque annotation `Note` a sa description dans la fiche, et inversement
 - Aucun livrable d'une phase précédente n'est modifié sans accord explicite
+- Niveau de détail comparable aux [exemples](./references/exemples.md), sans reprendre leur contenu
 - Langue des livrables : celle du brief

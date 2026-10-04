@@ -7,7 +7,7 @@
 
 | Zone | Schéma d'organisation | Justification | Rubriques de 1er niveau | Profondeur max |
 |---|---|---|---|---|
-| {Espace adhérent} | {par objet} | {constat persona ou flow} | {Mes soins, Mes contrats, Mes documents} | {2} |
+| {Espace client} | {par objet} | {constat persona ou flow} | {Mes démarches, Mes contrats, Mes documents} | {2} |
 
 ## {Zone}
 
@@ -35,7 +35,7 @@ flowchart TD
 
 | Rubrique | Contient | Pourquoi ici |
 |---|---|---|
-| {Mes soins} | EC04, EC07 | {objet Remboursement, tâche la plus fréquente de {Prénom}} |
+| {Mes démarches} | EC04, EC07 | {objet Demande, tâche la plus fréquente de {Prénom}} |
 
 ## Écrans contextuels
 

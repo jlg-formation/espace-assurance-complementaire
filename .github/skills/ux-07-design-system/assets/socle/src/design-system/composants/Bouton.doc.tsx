@@ -9,13 +9,13 @@ export const doc: DocComposant = {
   exemples: [
     {
       titre: 'Principal',
-      rendu: <Bouton variante="principal">Envoyer une facture</Bouton>,
-      code: '<Bouton variante="principal" vers="EC05">Envoyer une facture</Bouton>',
+      rendu: <Bouton variante="principal">Envoyer une demande</Bouton>,
+      code: '<Bouton variante="principal" vers="EC05">Envoyer une demande</Bouton>',
     },
     {
       titre: 'Secondaire',
-      rendu: <Bouton>Voir mes garanties</Bouton>,
-      code: '<Bouton vers="EC12">Voir mes garanties</Bouton>',
+      rendu: <Bouton>Voir mes documents</Bouton>,
+      code: '<Bouton vers="EC12">Voir mes documents</Bouton>',
     },
     {
       titre: 'Désactivé',

@@ -11,9 +11,11 @@ disable-model-invocation: true
 
 Le design system habille les structures validées en wireframe ; il n'en invente pas. Chaque composant naît d'un motif qui revient dans les wireframes, chaque décision visuelle sert un principe tiré des personas, et chaque couleur passe les contrastes WCAG AA.
 
-Trois couches : les **tokens** (les décisions : couleurs, typographie, espacements), les **composants** (bouton, champ, ligne de remboursement), la **documentation** (quand et comment les utiliser). Chaque composant du kit de wireframes a son équivalent, **même nom, mêmes props** (contrat `web/src/projet/ui.ts`) : un écran passe du wireframe au prototype en changeant son import.
+Trois couches : les **tokens** (les décisions : couleurs, typographie, espacements), les **composants** (bouton, champ, ligne de demande), la **documentation** (quand et comment les utiliser). Chaque composant du kit de wireframes a son équivalent, **même nom, mêmes props** (contrat `web/src/projet/ui.ts`) : un écran passe du wireframe au prototype en changeant son import.
 
 Méthodes : [méthode du design system](./references/methode-design-system.md) · [socle web](../ux-06-wireframes/references/socle-web.md).
+
+**Exemples commentés** : [exemples](./references/exemples.md) — principe, piste d'identité, tokens, CSS mobile d'abord, inventaire et fiche de composant, avec paires ✅ / ❌ ; le `Bouton` du socle est un composant complet. Les relire avant de rédiger et de coder ; ne jamais recopier leur contenu.
 
 ## Prérequis
 - Livrables de `ux-06-wireframes` : `docs/07-wireframes/00-index.md` (composants récurrents, écrans terminés) et l'application `web/` avec ses wireframes.
@@ -31,15 +33,15 @@ Si `docs/08-design-system/` ou `web/src/design-system/` contiennent déjà des l
 ### 1. Inventorier les composants
 Créer `docs/08-design-system/00-index.md` selon [le modèle d'index](./assets/index-template.md).
 - Partir des composants du kit (`web/src/projet/ui.ts`) : chacun aura son équivalent.
-- Partir de la liste « Composants récurrents » de `07-wireframes/00-index.md`, puis parcourir les écrans de `web/src/wireframes/ecrans/`, **une zone à la fois**, et relever : les assemblages de composants du kit qui se répètent (ligne de remboursement, carte de contrat, dépôt de fichier...), leurs variantes et leurs états, les écrans où ils apparaissent.
-- Classer chaque entrée par niveau : **élément** (Bouton, Champ, Etiquette), **composant** (assemblage : ligne de remboursement), **modèle** (Gabarit).
+- Partir de la liste « Composants récurrents » de `07-wireframes/00-index.md`, puis parcourir les écrans de `web/src/wireframes/ecrans/`, **une zone à la fois**, et relever : les assemblages de composants du kit qui se répètent (ligne de demande, carte de contrat, dépôt de fichier...), leurs variantes et leurs états, les écrans où ils apparaissent.
+- Classer chaque entrée par niveau : **élément** (Bouton, Champ, Etiquette), **composant** (assemblage : ligne de demande), **modèle** (Gabarit).
 - Noter les **incohérences** : deux motifs proches qui devraient n'en faire qu'un, un même motif traité différemment selon l'écran.
 
 Consigner chaque zone dans la section « Inventaire des composants » aussitôt parcourue. En cas d'interruption, reprendre aux zones absentes.
 
 ### 2. Poser les principes et la rédaction
 Rédiger `docs/08-design-system/01-principes.md` selon [le modèle de principes](./assets/principes-template.md) :
-- 3 à 5 **principes de design**, chacun tiré d'un constat des personas (« Ce qui le bloque », « Aisance ») avec sa source, et traduit en décisions concrètes (« Le montant remboursé est toujours plus visible que le montant payé »).
+- 3 à 5 **principes de design**, chacun tiré d'un constat des personas (« Ce qui le bloque », « Aisance ») avec sa source, et traduit en décisions concrètes (« Le statut et le délai d'une demande sont toujours visibles avant son détail »).
 - **Voix et ton**, à partir du glossaire et du vocabulaire des personas.
 - **Formats** : montants, dates, numéros, pourcentages, en français.
 
@@ -114,4 +116,5 @@ Résumer les principes, la piste retenue, le nombre de tokens primitifs et séma
 - Accessibilité : focus visible, cibles de 44 px, aucune information par la seule couleur, `prefers-reduced-motion` respecté, rôles et attributs ARIA documentés dans la fiche
 - L'écran témoin passe du wireframe au design system en changeant son import
 - Aucun livrable d'une phase précédente n'est modifié sans accord explicite
+- Niveau de détail comparable aux [exemples](./references/exemples.md), sans reprendre leur contenu
 - Langue des livrables : celle du brief

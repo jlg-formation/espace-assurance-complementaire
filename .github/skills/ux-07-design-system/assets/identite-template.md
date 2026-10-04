@@ -1,6 +1,6 @@
 # Identité visuelle — {marque fictive}
 
-> Marque **fictive**, créée pour illustrer la démarche. Elle n'imite aucun assureur, aucune mutuelle ni aucune banque existants. Polices système uniquement.
+> Marque **fictive**, créée pour illustrer la démarche. Elle n'imite aucune marque existante, en particulier dans le secteur du projet. Polices système uniquement.
 
 Comparer les pistes : `cd web; bun run dev`, puis `/#/design-system/pistes` ([Pistes.tsx](../../web/src/design-system/Pistes.tsx)).
 

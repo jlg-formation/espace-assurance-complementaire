@@ -8,7 +8,7 @@
 - **Constat** : {ce que vivent les personas} — [{Prénom}](../02-persona/{NN}-{prenom}.persona.md) `[P02]` `[P05]`
 - **Ce qu'on choisit, ce qu'on écarte** : {...}
 - **Décisions** :
-  - {Le montant remboursé est en premier et en gras ; le détail du calcul est replié.}
+  - {Le statut et le délai d'une demande sont en premier ; l'historique détaillé est replié.}
   - {...}
 
 ## Voix et ton
@@ -17,8 +17,8 @@
 
 | Moment | Ton | Exemple |
 |---|---|---|
-| {Remboursement reçu} | {simple, positif} | {« Vous avez été remboursé de 18,55 €. »} |
-| {Erreur de dépôt} | {calme, orienté solution} | {« Nous n'arrivons pas à lire cette facture. Reprenez la photo en pleine lumière, ou envoyez un PDF. »} |
+| {Demande traitée} | {simple, positif} | {« Votre demande a été traitée le 14 septembre. »} |
+| {Erreur de dépôt} | {calme, orienté solution} | {« Nous n'arrivons pas à lire ce document. Reprenez la photo en pleine lumière, ou envoyez un PDF. »} |
 | {Refus de prise en charge} | {...} | {...} |
 
 **À faire** : {...} · **À éviter** : {jargon du glossaire « termes à éviter », majuscules de mise en avant, ...}
@@ -31,4 +31,4 @@
 | Date dans un texte | jour mois année | `12 septembre 2026` |
 | Date dans un tableau | abrégée | `12 sept. 2026` |
 | Pourcentage | espace insécable avant % | `100 %` |
-| {Numéro d'adhérent} | {groupes de ...} | {...} |
+| {Numéro de client} | {groupes de ...} | {...} |

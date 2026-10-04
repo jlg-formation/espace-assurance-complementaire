@@ -38,15 +38,15 @@ export function Pistes() {
               <p className="piste-logo">{p.marque}</p>
               <h2 id={`piste-${p.id}`}>Piste {p.id.toUpperCase()} — {p.intention}</h2>
               <div className="piste-carte">
-                <p>Consultation généraliste — 12 sept. 2026</p>
-                <p className="piste-montant">18,55 € remboursés</p>
-                <p>Reste à payer : 7,95 €</p>
+                <p>Attestation annuelle — envoyée le 3 sept. 2026</p>
+                <p className="piste-montant">Réponse sous 5 jours</p>
+                <p>Statut : en cours de traitement</p>
               </div>
               <p>
-                <a className="piste-btn piste-btn--principal" href="#">Envoyer une facture</a>{' '}
-                <a className="piste-btn" href="#">Voir mes garanties</a>
+                <a className="piste-btn piste-btn--principal" href="#">Envoyer une demande</a>{' '}
+                <a className="piste-btn" href="#">Voir mes documents</a>
               </p>
-              <p className="piste-alerte"><strong>Erreur :</strong> Nous n'arrivons pas à lire cette facture.</p>
+              <p className="piste-alerte"><strong>Erreur :</strong> Nous n'arrivons pas à lire ce document.</p>
             </section>
           ))}
         </div>

@@ -13,6 +13,8 @@ Les personas émergent des données, pas l'inverse. Chaque affirmation d'un pers
 
 Méthode détaillée : [méthode de synthèse](./references/methode-synthese.md).
 
+**Exemples commentés** : [exemples](./references/exemples.md) — observations, thèmes, persona et journey map remplis sur un projet fictif, et paires ✅ / ❌. Les relire avant d'extraire, de synthétiser et de rédiger ; ne jamais recopier leur contenu.
+
 ## Prérequis
 - Livrables de `ux-01-discovery` : `docs/01-vision.md`, `docs/02-persona/proto/*.proto-persona.md`, `docs/research/plan-de-recherche.md`.
 - Données brutes dans `docs/research/raw/`, nommées selon les conventions du plan de recherche.
@@ -92,4 +94,5 @@ Résumer les livrables, les principaux apprentissages, les hypothèses invalidé
 - Les personas se distinguent par leurs comportements (variables comportementales), pas seulement par leur démographie
 - Personas courts et à l'objet : un écran maximum, 3 puces maximum par section. Une identité concrète en une phrase et une situation précise en 2-3 phrases pour que le lecteur cerne la personne ; l'essentiel porte sur le comportement vis-à-vis de l'application
 - Aucune donnée personnelle identifiante issue des sources ne figure dans les livrables
+- Niveau de détail comparable aux [exemples](./references/exemples.md), sans reprendre leur contenu
 - Langue des livrables : celle du brief

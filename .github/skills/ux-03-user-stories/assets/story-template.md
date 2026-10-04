@@ -26,7 +26,7 @@ Scénario: {cas d'erreur ou alternatif}
 ```
 
 ## Notes
-- **Contraintes** : {accessibilité, données de santé, consentement...}
+- **Contraintes** : {accessibilité, données sensibles, consentement...}
 - **Hors périmètre** : {...}
 - **Hypothèses** : {...}
 

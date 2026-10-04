@@ -8,20 +8,20 @@
 
 | Élément | Libellé | Termes à éviter | Source | Confiance |
 |---|---|---|---|---|
-| [EC04](./01-contenus.inventory.md#ec04) | {Mes remboursements} | {Prestations, Décomptes} | {« je regarde mes remboursements » `[P04]`} | {🟢} |
-| r1 (rubrique) | {Mes soins} | {...} | {...} | {...} |
+| [EC04](./01-contenus.inventory.md#ec04) | {Mes demandes} | {Requêtes, Tickets} | {« je regarde où en sont mes demandes » `[P04]`} | {🟢} |
+| r1 (rubrique) | {Mes démarches} | {...} | {...} | {...} |
 
 ## Vocabulaire des personas
 
 | Le persona dit | Le métier dit | Retenu | Source |
 |---|---|---|---|
-| {ce qui me reste à payer} | {ticket modérateur, reste à charge} | {Reste à payer} | `[P02]` `[P07]` |
+| {où en est mon dossier} | {statut de traitement} | {Suivi} | `[P02]` `[P07]` |
 
 ## Termes métier inévitables
 
 | Terme | Définition en une phrase, pour le persona | Où l'expliquer |
 |---|---|---|
-| {Tiers payant} | {Vous n'avancez pas les frais : la mutuelle paie directement le professionnel.} | {EC12, infobulle} |
+| {Pièce justificative} | {Document qui prouve ce que vous déclarez : facture, attestation, justificatif de domicile...} | {EC05, aide du champ} |
 
 ## Conventions
 - {Possessif dans l'espace connecté (« Mes contrats »), neutre sur le site public (« Nos offres »)}

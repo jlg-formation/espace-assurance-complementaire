@@ -1,7 +1,7 @@
 ---
 name: ux-08-prototypes
 description: "Phase 8 de la démarche UX : produit les prototypes haute fidélité de tous les écrans maquettés, dans l'application Bun + Vite + TypeScript + React (web/). Chaque wireframe passe au design system en changeant son import, puis reçoit de vrais contenus tirés d'un jeu de données fictif cohérent. Mode test sans barre de revue pour les tests d'utilisabilité, protocole de test rédigé (résultats jamais simulés), contrôle d'accessibilité. Tests automatiques : couverture, états, contenus réels, parcours cliquables. À lancer après ux-07-design-system."
-argument-hint: "Optionnel : zone ou écran à traiter (ex : espace adhérent, EC04)"
+argument-hint: "Optionnel : zone ou écran à traiter (ex : espace client, EC04)"
 disable-model-invocation: true
 ---
 
@@ -14,6 +14,8 @@ Un prototype haute fidélité montre l'expérience telle qu'elle sera : le desig
 Il n'invente rien : chaque écran est la copie de son wireframe dont l'import passe du kit au design system ; seuls les contenus deviennent réels, tirés d'un jeu de données fictif unique pour que les montants et les dates restent cohérents d'un écran à l'autre. Les parcours se vérifient comme pour les wireframes, et un **mode test** sans barre de revue permet de mener des tests d'utilisabilité.
 
 Méthodes : [méthode des prototypes](./references/methode-prototypes.md) · [socle web](../ux-06-wireframes/references/socle-web.md).
+
+**Exemples commentés** : [exemples](./references/exemples.md) — passage du wireframe au prototype, jeu de données, tâche de test et constats d'accessibilité, avec paires ✅ / ❌ ; le modèle `assets/modeles/EC04-suivi-des-demandes.tsx` est un prototype complet. Les relire avant de prototyper ; ne jamais recopier leur contenu.
 
 ## Prérequis
 - Livrables de `ux-07-design-system` : `web/src/design-system/` complet (le test « correspondance avec le kit » passe) et `docs/08-design-system/` (principes, rédaction, inventaire des composants avec les fusions validées).
@@ -36,22 +38,22 @@ Si `docs/09-prototypes/` ou `web/src/prototypes/ecrans/` contiennent déjà des 
 
 ### 2. Construire le jeu de données fictif
 Dans `web/src/prototypes/donnees/donnees.ts`, remplacer les données d'exemple par un jeu **unique** pour tous les écrans :
-- un adhérent fictif dont la situation reprend celle du persona principal (composition du foyer, contrats, garanties, historique), sans jamais reprendre un participant de la recherche ni une personne réelle ;
-- les objets métier de l'inventaire des contenus (contrats, remboursements, documents...), typés, avec des valeurs plausibles et **cohérentes** (montant payé − montant remboursé = reste à payer ; dates dans l'ordre du parcours) ;
-- de quoi alimenter chaque état des wireframes (liste vide, remboursement en attente, refus...).
+- un utilisateur fictif dont la situation reprend celle du persona principal (foyer ou entreprise, contrats ou abonnements, historique), sans jamais reprendre un participant de la recherche ni une personne réelle ;
+- les objets métier de l'inventaire des contenus (comptes, demandes, documents...), typés, avec des valeurs plausibles et **cohérentes** (un total égal à la somme de ses lignes ; une réponse postérieure à l'envoi ; dates dans l'ordre du parcours) ;
+- de quoi alimenter chaque état des wireframes (liste vide, demande en cours, refus...).
 
 Les montants, dates et pourcentages s'affichent toujours par `formats.ts` (formats français des principes de rédaction).
 
 ### 3. Valider avec l'utilisateur
 Présenter avec l'outil de questions interactif natif (Ask Questions dans VS Code, AskUserQuestion dans Claude Code, etc.) :
-- Le jeu de données fictif (qui est l'adhérent, ce qu'il a vécu)
+- Le jeu de données fictif (qui est l'utilisateur, ce qu'il a vécu)
 - L'ordre de production et les fusions de composants du design system à appliquer
 - Les parcours qui seront soumis au test d'utilisabilité
 
 Demander une validation explicite avant de prototyper.
 
 ### 4. Prototyper (après validation uniquement)
-Traiter **un écran à la fois**, dans l'ordre de l'index, sur le modèle de [l'écran prototypé d'exemple](./assets/modeles/EC04-suivi-des-remboursements.tsx) :
+Traiter **un écran à la fois**, dans l'ordre de l'index, sur le modèle de [l'écran prototypé d'exemple](./assets/modeles/EC04-suivi-des-demandes.tsx) :
 1. Copier `src/wireframes/ecrans/NN-<zone>/ECNN-<ecran>.tsx` vers `src/prototypes/ecrans/NN-<zone>/ECNN-<ecran>.tsx`.
 2. Remplacer l'import du kit par `../../../design-system/composants`. Retirer les `Note` (leur contenu est déjà dans la fiche du wireframe). Remplacer les `Texte` par du vrai texte, rédigé selon la voix et le ton des principes.
 3. Remplacer les valeurs écrites en dur par des lectures du jeu de données, formatées par `formats.ts`.
@@ -102,10 +104,11 @@ Résumer le nombre d'écrans prototypés par zone et par version, les parcours t
 - **Bloquant** : chaque happy path `Must` du MVP se parcourt au clavier seul, avec un focus visible
 - La structure de chaque écran est celle de son wireframe, aux fusions validées près ; tout autre écart est un retour
 - Contenus réels : tirés du jeu de données fictif unique, cohérents entre écrans, formatés en français par `formats.ts`, rédigés selon la voix, le ton et le glossaire
-- Aucune donnée personnelle réelle ; l'adhérent fictif ne reprend aucun participant de la recherche
+- Aucune donnée personnelle réelle ; l'utilisateur fictif ne reprend aucun participant de la recherche
 - Lisible à 375 px, à 1280 px et avec un zoom à 200 %
 - Le mode test n'affiche ni barre de revue ni bandeau, et ses liens restent en mode test
 - Le protocole de test couvre chaque parcours `Must` du MVP, avec des scénarios sans les libellés de l'interface ; aucun résultat n'est inventé
 - Les fichiers copie conforme du socle sont identiques aux assets du skill ; aucune dépendance hors socle, aucune ressource externe, aucun appel réseau
 - Aucun livrable d'une phase précédente n'est modifié sans accord explicite
+- Niveau de détail comparable aux [exemples](./references/exemples.md), sans reprendre leur contenu
 - Langue des livrables : celle du brief

@@ -27,7 +27,7 @@ flowchart TD
     x1["{Étape hors application}"]:::horsApp
     v1["{Prénom} : {étape propre à la variante}"]:::variante
     fin(["{Fin}"])
-    fin2(["{Fin : traité par un conseiller}"])
+    fin2(["{Fin : traité par le service client}"])
 
     start ==>|"{action}"| uf1
     uf1 ==> EC01
