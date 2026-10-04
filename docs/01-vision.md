@@ -114,3 +114,5 @@ Détail et sources : [synthèse](./research/synthese.md#confrontation-aux-hypoth
 
 ## Étapes suivantes
 Recherche utilisateur → synthèse (personas fondés, journey maps) → user stories → user flows → architecture de l'information → design system → prototypes
+
+User stories : [story map](./04-user-stories/00-story-map.md) (8 épopées, 27 stories).

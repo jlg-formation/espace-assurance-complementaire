@@ -45,9 +45,9 @@ export function Gabarit({ zone, rubrique, ariane, children }: PropsGabarit) {
           <ol>
             {ariane.map((a, i) => (
               <li key={a.libelle}>
-                {a.vers && i < ariane.length - 1
-                  ? <Link to={chemin(a.vers)}>{a.libelle}</Link>
-                  : <span aria-current="page">{a.libelle}</span>}
+                {i === ariane.length - 1
+                  ? <span aria-current="page">{a.libelle}</span>
+                  : a.vers ? <Link to={chemin(a.vers)}>{a.libelle}</Link> : <span>{a.libelle}</span>}
               </li>
             ))}
           </ol>

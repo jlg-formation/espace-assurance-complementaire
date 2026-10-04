@@ -1,0 +1,198 @@
+/* Wireframes basse fidélité — niveaux de gris. Copie conforme de l'asset du skill ux-06. */
+/* Styles de base limités à .wf-racine : le design system cohabite dans la même application. */
+
+:root {
+  --wf-noir: #222;
+  --wf-gris-fonce: #555;
+  --wf-gris: #999;
+  --wf-gris-clair: #ddd;
+  --wf-fond: #f4f4f4;
+  --wf-blanc: #fff;
+  --wf-rayon: 4px;
+  --wf-cible: 44px;
+}
+
+body { margin: 0; }
+
+.wf-racine, .wf-racine *, .wf-racine *::before, .wf-racine *::after { box-sizing: border-box; }
+
+.wf-racine {
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--wf-noir);
+  background: var(--wf-blanc);
+}
+
+/* :where() garde ces styles de base à la spécificité d'un élément : les classes wf-* l'emportent. */
+:where(.wf-racine) h1 { font-size: 1.5rem; margin: 0 0 1rem; }
+:where(.wf-racine) h2 { font-size: 1.25rem; margin: 1.5rem 0 .75rem; }
+:where(.wf-racine) h3 { font-size: 1.05rem; margin: 1rem 0 .5rem; }
+:where(.wf-racine) p { margin: 0 0 .75rem; }
+:where(.wf-racine) a { color: inherit; }
+:where(.wf-racine) :focus-visible { outline: 3px solid var(--wf-noir); outline-offset: 2px; }
+
+/* Barre de revue : ne fait pas partie de l'interface */
+.wf-outil {
+  position: relative;
+  z-index: 10;
+  display: flex; flex-wrap: wrap; gap: .25rem 1rem;
+  padding: .5rem 1rem;
+  font-size: .85rem;
+  background: repeating-linear-gradient(45deg, #eee 0 10px, #e4e4e4 10px 20px);
+  border-bottom: 2px dashed var(--wf-gris);
+}
+.wf-outil [aria-current] { font-weight: 700; }
+
+/* Structure */
+.wf-entete {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem;
+  padding: .5rem 1rem;
+  border-bottom: 1px solid var(--wf-gris-clair);
+}
+.wf-logo { display: inline-block; padding: .25rem .75rem; border: 2px solid var(--wf-noir); font-weight: 700; text-decoration: none; }
+
+:where(.wf-racine) main { display: block; max-width: 72rem; margin: 0 auto; padding: 1rem; }
+
+.wf-pied {
+  margin-top: 2rem; padding: 1rem;
+  border-top: 1px solid var(--wf-gris-clair);
+  font-size: .875rem;
+}
+.wf-pied ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+
+/* Navigation */
+.wf-nav-globale ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 .25rem; }
+.wf-nav-globale a {
+  display: flex; align-items: center; min-height: var(--wf-cible);
+  padding: 0 .75rem; text-decoration: none;
+}
+.wf-racine [aria-current="page"] { font-weight: 700; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: .35em; }
+
+.wf-ariane ol { list-style: none; margin: 0; padding: .5rem 1rem; display: flex; flex-wrap: wrap; gap: .25rem; font-size: .875rem; }
+.wf-ariane li + li::before { content: "›"; margin-right: .25rem; }
+
+/* Mobile d'abord : barre d'onglets fixée en bas, remise dans le flux à partir de 768 px. */
+.wf-nav-globale--onglets {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 5;
+  background: var(--wf-blanc); border-top: 2px solid var(--wf-noir);
+}
+.wf-nav-globale--onglets ul { justify-content: space-around; }
+.wf-nav-globale--onglets a { flex-direction: column; justify-content: center; padding: .25rem; font-size: .8rem; text-align: center; }
+.wf-racine:has(.wf-nav-globale--onglets) { padding-bottom: 4.5rem; }
+
+@media (min-width: 768px) {
+  .wf-nav-globale--onglets { position: static; border-top: 0; }
+  .wf-nav-globale--onglets ul { justify-content: flex-start; }
+  .wf-nav-globale--onglets a { flex-direction: row; padding: 0 .75rem; font-size: inherit; text-align: left; }
+  .wf-racine:has(.wf-nav-globale--onglets) { padding-bottom: 0; }
+}
+
+/* Mise en page */
+.wf-pile { display: flex; flex-direction: column; gap: 1rem; }
+.wf-grille { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); }
+.wf-colonnes { display: grid; gap: 1rem; }
+@media (min-width: 1024px) {
+  .wf-colonnes { grid-template-columns: 2fr 1fr; }
+}
+.wf-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; list-style: none; margin: 0; padding: 0; }
+
+/* Blocs */
+.wf-bloc { padding: 1rem; border: 1px solid var(--wf-gris); border-radius: var(--wf-rayon); }
+.wf-carte {
+  display: flex; flex-direction: column; gap: .25rem; padding: 1rem;
+  border: 1px solid var(--wf-gris); border-radius: var(--wf-rayon);
+  text-decoration: none;
+}
+a.wf-carte:hover { background: var(--wf-fond); }
+
+.wf-liste { list-style: none; margin: 0; padding: 0; }
+.wf-liste > li {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .25rem 1rem;
+  padding: .75rem 0; border-bottom: 1px solid var(--wf-gris-clair);
+}
+
+/* Actions */
+.wf-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: var(--wf-cible); padding: .5rem 1rem;
+  border: 2px solid var(--wf-noir); border-radius: var(--wf-rayon);
+  background: var(--wf-blanc); color: var(--wf-noir);
+  font: inherit; font-weight: 600; text-decoration: none; cursor: pointer;
+}
+.wf-btn--principal { background: var(--wf-noir); color: var(--wf-blanc); }
+.wf-btn:disabled { border-style: dashed; cursor: not-allowed; opacity: .6; }
+.wf-lien { text-decoration: underline; }
+
+/* Formulaires */
+.wf-champ { display: flex; flex-direction: column; gap: .25rem; }
+.wf-champ label { font-weight: 600; }
+.wf-champ input, .wf-champ select, .wf-champ textarea {
+  min-height: var(--wf-cible); padding: .5rem;
+  border: 1px solid var(--wf-gris-fonce); border-radius: var(--wf-rayon);
+  font: inherit; background: var(--wf-blanc);
+}
+.wf-champ--erreur input, .wf-champ--erreur select, .wf-champ--erreur textarea { border-width: 3px; border-color: var(--wf-noir); }
+.wf-aide { font-size: .875rem; color: var(--wf-gris-fonce); }
+
+/* Messages et statuts : jamais par la seule couleur, le texte porte le sens */
+.wf-alerte {
+  padding: .75rem 1rem;
+  border: 2px solid var(--wf-noir); border-left-width: 8px; border-radius: var(--wf-rayon);
+  background: var(--wf-fond);
+}
+.wf-alerte > :last-child { margin-bottom: 0; }
+.wf-etiquette {
+  display: inline-block; padding: 0 .5rem;
+  border: 1px solid var(--wf-gris-fonce); border-radius: 999px;
+  font-size: .85rem;
+}
+
+/* Remplissage */
+.wf-image {
+  min-height: 8rem;
+  border: 1px solid var(--wf-gris);
+  background:
+    linear-gradient(to top right, transparent calc(50% - 1px), var(--wf-gris) 50%, transparent calc(50% + 1px)),
+    linear-gradient(to bottom right, transparent calc(50% - 1px), var(--wf-gris) 50%, transparent calc(50% + 1px));
+}
+.wf-texte {
+  background: repeating-linear-gradient(to bottom, var(--wf-gris-clair) 0 .6em, transparent .6em 1.5em);
+}
+
+/* Modale */
+.wf-modale {
+  position: fixed; inset: 0; z-index: 6;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem; background: rgba(0, 0, 0, .5);
+}
+.wf-modale > [role="dialog"] {
+  width: 100%; max-width: 32rem; padding: 1.5rem;
+  border: 2px solid var(--wf-noir); border-radius: var(--wf-rayon);
+  background: var(--wf-blanc);
+}
+
+/* Annotations */
+.wf-note {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.5rem; height: 1.5rem; margin: 0 .25rem;
+  border: 2px dashed var(--wf-noir); border-radius: 50%;
+  font-size: .75rem; font-weight: 700; vertical-align: middle;
+}
+.wf-note::after { content: attr(data-note); }
+
+/* Visibilité selon l'appareil */
+.wf-ordinateur { display: none; }
+@media (min-width: 768px) {
+  .wf-mobile { display: none; }
+  .wf-ordinateur { display: block; }
+}
+
+/* Galerie */
+.wf-apercus { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.wf-apercu { margin: 0; }
+.wf-cadre { width: 200px; height: 356px; overflow: hidden; border: 1px solid var(--wf-gris); }
+.wf-cadre--vide { display: flex; align-items: center; justify-content: center; border-style: dashed; color: var(--wf-gris-fonce); }
+.wf-cadre iframe { width: 375px; height: 667px; border: 0; transform: scale(.533); transform-origin: 0 0; pointer-events: none; }
+.wf-apercu figcaption { margin-top: .5rem; font-size: .875rem; }
