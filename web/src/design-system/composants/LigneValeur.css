@@ -1,0 +1,18 @@
+.ds-ligne-valeur__libelle { flex: 1 1 60%; }
+.ds-ligne-valeur__valeur {
+  flex: 0 1 auto;
+  margin-left: auto;
+  font-weight: var(--ds-font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.ds-liste > .ds-ligne-valeur--total {
+  margin-top: var(--ds-space-2);
+  padding: var(--ds-space-3);
+  border-bottom: 0;
+  border-left: var(--ds-size-accent-bar) solid var(--ds-color-border-accent);
+  background: var(--ds-color-background-accent);
+}
+.ds-ligne-valeur--total .ds-ligne-valeur__libelle { font-weight: var(--ds-font-weight-bold); }
+.ds-ligne-valeur--total .ds-ligne-valeur__valeur { font-size: var(--ds-font-size-l); }

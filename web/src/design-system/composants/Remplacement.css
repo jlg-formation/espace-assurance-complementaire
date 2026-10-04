@@ -1,0 +1,14 @@
+.ds-image {
+  min-height: var(--ds-size-placeholder);
+  border: 1px dashed var(--ds-color-border-strong);
+  border-radius: var(--ds-radius-s);
+  background: var(--ds-color-background-accent);
+}
+.ds-texte {
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--ds-color-border-default) 0 40%,
+    transparent 40% 100%
+  );
+  background-size: 100% calc(var(--ds-font-line-height-base) * var(--ds-font-size-m));
+}

@@ -38,7 +38,7 @@ export default function EC46({ etat }: PropsEcran) {
               <Ligne><span>RIB — 14 mai</span><Etiquette ton="succes">Acceptée</Etiquette></Ligne>
               <Ligne>
                 <span>Relevé du régime obligatoire{refusee ? ' — 2 juin' : ''}</span>
-                <Etiquette ton={refusee ? 'erreur' : 'avertissement'}>{refusee ? 'Refusée' : 'Attendue'}</Etiquette>
+                <Etiquette ton={refusee ? 'erreur' : 'avertissement'}>{refusee ? 'Refusée' : 'À fournir'}</Etiquette>
               </Ligne>
             </Liste>
             <Note n={1} />

@@ -9,9 +9,9 @@ export default function EC22(_props: PropsEcran) {
       <Pile>
         <Alerte type="succes" titre="Contrat Mutuelle santé Confort signé." />
         <Liste>
-          <Ligne><span>Votre contrat</span><span>envoyé par e-mail</span></Ligne>
-          <Ligne><span>Votre carte de mutuelle</span><span>disponible dès maintenant dans votre espace</span></Ligne>
-          <Ligne><span>Première cotisation</span><span>38,90 € le 5 novembre 2026</span></Ligne>
+          <Ligne><span>Votre contrat</span><strong>envoyé par e-mail</strong></Ligne>
+          <Ligne><span>Votre carte de mutuelle</span><strong>disponible dès maintenant dans votre espace</strong></Ligne>
+          <Ligne><span>Première cotisation</span><strong>38,90 € le 5 novembre 2026</strong></Ligne>
         </Liste>
         <Actions>
           <Bouton variante="principal" vers="EC23">Accéder à mon espace</Bouton>

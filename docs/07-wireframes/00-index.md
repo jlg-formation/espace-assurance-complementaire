@@ -124,6 +124,9 @@ Ouvrir la galerie : `cd web; bun run dev`, puis `/#/wireframes`. Vérifier : `bu
 | EC08, EC10 | kit | composant manquant | Case à cocher | Permettre plusieurs choix dans `Champ` (cases à cocher) ; contourné par des listes d'options | refusé (reporté au design system) |
 | EC37 | backlog | scénario manquant | US-04.03 | « Étant donné que la réponse au devis est disponible, Quand Sylvie la télécharge, Alors elle obtient un document à remettre à l'orthodontiste » | accepté (scénario « Réponse transmise au praticien », ⚪) |
 | EC28 | architecture | lien vers un écran V2 | utilitaire « Mon compte » | Au MVP, « Mon compte » mène à EC28 (V2) : prévoir une page compte MVP ou masquer le lien au MVP | refusé (maquette cible V2 conservée) |
+| EC27, EC36, EC38, EC46 | wireframes (origine `DS`) | motif à harmoniser | statuts | 7 statuts du design system (`LigneSuivi`) : « En étude », « En attente » → « En cours », « Attendue » → « À fournir » ; retard d'EC36 sans gras | accepté |
+| EC11, EC22 | wireframes (origine `DS`) | motif à harmoniser | lignes libellé / valeur | Valeur en `strong` (`LigneValeur`) | accepté |
+| EC43 | wireframes (origine `DS`) | donnée incohérente | état `hors-delai` | Date de fin prévue au 30 septembre 2026 (elle précédait la date de début) | accepté |
 
 ## Questions ouvertes
 - ~~Le libellé d'onglet « Mon arrêt de travail » tient-il sur une ligne à 375 px ?~~ Oui, vérifié dans le gabarit espace adhérent.

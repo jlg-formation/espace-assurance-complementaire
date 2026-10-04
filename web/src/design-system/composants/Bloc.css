@@ -1,0 +1,13 @@
+.ds-bloc {
+  padding: var(--ds-space-4);
+  border: 1px solid var(--ds-color-border-default);
+  border-radius: var(--ds-radius-s);
+  background: var(--ds-color-background-subtle);
+}
+.ds-bloc > h2:first-child, .ds-bloc > h3:first-child { margin-top: 0; }
+.ds-bloc > :last-child { margin-bottom: 0; }
+
+/* breakpoint.tablet */
+@media (min-width: 768px) {
+  .ds-bloc { padding: var(--ds-space-5); }
+}

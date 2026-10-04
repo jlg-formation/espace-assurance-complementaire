@@ -1,0 +1,13 @@
+.ds-pile { display: flex; flex-direction: column; gap: var(--ds-space-5); }
+.ds-pile > * { margin-bottom: 0; }
+
+.ds-grille { display: grid; gap: var(--ds-space-4); grid-template-columns: repeat(auto-fill, minmax(var(--ds-size-card-min), 1fr)); }
+
+.ds-colonnes { display: grid; gap: var(--ds-space-5); }
+
+.ds-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--ds-space-3); }
+
+/* breakpoint.desktop */
+@media (min-width: 1024px) {
+  .ds-colonnes { grid-template-columns: 2fr 1fr; gap: var(--ds-space-6); }
+}

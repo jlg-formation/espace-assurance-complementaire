@@ -22,7 +22,7 @@ export default function EC36({ etat }: PropsEcran) {
           <Liste>
             <Ligne>
               {etat === 'retard' ? (
-                <span>Devis d'orthodontie de Lucas — envoyé le 3 oct. — <strong>réponse retardée au 17 oct. : avis de notre dentiste-conseil en cours</strong></span>
+                <span>Devis d'orthodontie de Lucas — envoyé le 3 oct. — réponse au 17 oct. : avis de notre dentiste-conseil en cours</span>
               ) : (
                 <Lien vers="EC37">Devis d'orthodontie de Lucas — envoyé le 3 oct. 2026</Lien>
               )}

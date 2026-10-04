@@ -29,7 +29,7 @@ export default function EC27({ etat }: PropsEcran) {
                 </Ligne>
                 <Ligne>
                   <Lien vers="EC36">Devis d'orthodontie de Lucas : réponse au plus tard le 10 octobre</Lien>
-                  <Etiquette ton="information">En étude</Etiquette>
+                  <Etiquette ton="information">En cours</Etiquette>
                 </Ligne>
               </Liste>
             )}

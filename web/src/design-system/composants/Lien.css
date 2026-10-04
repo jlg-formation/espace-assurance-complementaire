@@ -1,0 +1,8 @@
+.ds-lien {
+  color: var(--ds-color-text-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: var(--ds-space-1);
+}
+.ds-lien:hover { text-decoration-thickness: 2px; }
+.ds-lien:active { color: var(--ds-color-action-primary-hover); }

@@ -1,0 +1,17 @@
+.ds-carte {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-1);
+  min-height: var(--ds-size-target);
+  padding: var(--ds-space-4);
+  border: 1px solid var(--ds-color-border-strong);
+  border-radius: var(--ds-radius-s);
+  background: var(--ds-color-background-default);
+  color: var(--ds-color-text-default);
+  text-decoration: none;
+}
+.ds-carte__titre { font-size: var(--ds-font-size-l); }
+.ds-carte--lien .ds-carte__titre { color: var(--ds-color-text-link); text-decoration: underline; text-underline-offset: var(--ds-space-1); }
+.ds-carte--lien { transition: background-color var(--ds-duration-fast), border-color var(--ds-duration-fast); }
+.ds-carte--lien:hover { background: var(--ds-color-background-accent); border-color: var(--ds-color-border-accent); }
+.ds-carte--lien:active { transform: translateY(1px); }

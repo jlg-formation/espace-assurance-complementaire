@@ -1,0 +1,25 @@
+.ds-modale {
+  position: fixed;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: var(--ds-color-background-overlay);
+}
+.ds-modale > [role="dialog"] {
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: var(--ds-space-5);
+  border-radius: var(--ds-radius-m) var(--ds-radius-m) 0 0;
+  background: var(--ds-color-background-default);
+  color: var(--ds-color-text-default);
+}
+.ds-modale > [role="dialog"] > h2:first-child { margin-top: 0; }
+
+/* breakpoint.tablet : fenêtre centrée au lieu d'un panneau en bas */
+@media (min-width: 768px) {
+  .ds-modale { align-items: center; padding: var(--ds-space-4); }
+  .ds-modale > [role="dialog"] { max-width: var(--ds-size-dialog); border-radius: var(--ds-radius-m); }
+}

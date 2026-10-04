@@ -16,7 +16,7 @@ export default function EC11({ etat }: PropsEcran) {
           )}
           <Bloc titre="Mes garanties">
             <Liste>
-              <Ligne><span>Mutuelle santé Confort</span><span>Hélène et Inès (16 ans)</span></Ligne>
+              <Ligne><span>Mutuelle santé Confort</span><strong>Hélène et Inès (16 ans)</strong></Ligne>
               <Ligne><span>Prévoyance Confort : franchise</span><strong>30 jours</strong></Ligne>
               <Ligne><span>Revenu garanti</span><strong>36 000 € par an</strong></Ligne>
               <Ligne><span>En cas d'arrêt, à partir du 31e jour</span><strong>environ 2 700 € par mois</strong></Ligne>

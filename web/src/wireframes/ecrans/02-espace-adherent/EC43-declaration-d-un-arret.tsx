@@ -18,7 +18,7 @@ export default function EC43({ etat }: PropsEcran) {
         <Note n={1} />
         <Champ id="personne" libelle="Personne arrêtée" options={['Jean-Marc (titulaire du contrat)']} obligatoire />
         <Champ id="debut" libelle="Date de début de l'arrêt" type="date" valeur={horsDelai ? '2026-08-19' : '2026-05-12'} obligatoire />
-        <Champ id="fin" libelle="Date de fin prévue" type="date" valeur="2026-08-12" aide="Celle de l'avis d'arrêt ; vous pourrez déclarer une prolongation" />
+        <Champ id="fin" libelle="Date de fin prévue" type="date" valeur={horsDelai ? '2026-09-30' : '2026-08-12'} aide="Celle de l'avis d'arrêt ; vous pourrez déclarer une prolongation" />
         <Champ id="situation" libelle="Situation" options={['Maladie', 'Accident', 'Opération chirurgicale', 'Autre']} valeur="Opération chirurgicale" obligatoire />
         <Actions><Bouton variante="principal" vers="EC44">Continuer</Bouton></Actions>
         <p>Besoin d'aide ? <Lien vers="EC51">Être rappelé</Lien></p>

@@ -34,7 +34,7 @@ export default function EC38({ etat }: PropsEcran) {
               <Note n={1} />
               <h2>En attente</h2>
               <Liste>
-                <Ligne><span>Kinésithérapeute — Jean-Marc — 20 sept. 2026 · remboursement prévu vers le 2 octobre</span><Etiquette ton="information">En attente</Etiquette></Ligne>
+                <Ligne><span>Kinésithérapeute — Jean-Marc — 20 sept. 2026 · remboursement prévu vers le 2 octobre</span><Etiquette ton="information">En cours</Etiquette></Ligne>
               </Liste>
             </>
           )}

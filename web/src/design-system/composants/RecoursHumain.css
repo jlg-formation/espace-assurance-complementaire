@@ -1,0 +1,9 @@
+.ds-recours {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--ds-space-2);
+  min-height: var(--ds-size-target);
+  color: var(--ds-color-text-muted);
+}
+.ds-recours .ds-lien { display: inline-flex; align-items: center; min-height: var(--ds-size-target); font-weight: var(--ds-font-weight-bold); }

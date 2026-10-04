@@ -1,0 +1,7 @@
+.ds-ordinateur { display: none; }
+
+/* breakpoint.tablet */
+@media (min-width: 768px) {
+  .ds-mobile { display: none; }
+  .ds-ordinateur { display: block; }
+}
