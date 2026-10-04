@@ -68,11 +68,23 @@ Le problème se présente à quatre moments, tous à valider par la recherche :
 
 Segments écartés pour cette version : salariés couverts par un contrat collectif, retraités qui changent de mutuelle.
 
-## Parcours à cartographier
-- **Comprendre une offre et obtenir un devis, puis souscrire** : Léa, première mutuelle choisie depuis son ordinateur après plusieurs jours de comparaison. *(cartographié après la recherche)*
-- **Savoir combien sera remboursé avant un soin, puis suivre le remboursement** : Karim, lunettes de son fils. *(cartographié après la recherche)*
-- **Obtenir un devis prévoyance, remplir le questionnaire de santé et souscrire** : Stéphane, à son compte depuis peu, sur conseil de son expert-comptable. *(cartographié après la recherche)*
-- **Déclarer un arrêt de travail, envoyer les justificatifs et suivre les indemnités** : Isabelle, arrêt après une opération du dos. *(cartographié après la recherche)*
+## Personas fondés (après recherche)
+> ⚠️ Livrable fondé sur des données simulées, sans valeur de recherche. Détail : [synthèse](./research/synthese.md).
+
+Les segments ci-dessus ne prédisent pas le comportement : trois schémas les traversent.
+
+| Priorité | Persona | Schéma de comportement | Journey map |
+|---|---|---|---|
+| 01 | [Manon](./02-persona/01-manon.persona.md) | Agit au dernier moment, sur mobile, veut un chiffre en euros, ne lit pas son contrat | [Parcours de Manon](./03-customer-journey-map/01-manon.cjm.md) |
+| 02 | [Sylvie](./02-persona/02-sylvie.persona.md) | Proche qui gère les démarches du foyer sans être titulaire ; téléphone, courrier, conseiller | [Parcours de Sylvie](./03-customer-journey-map/02-sylvie.cjm.md) |
+| 03 | [Hélène](./02-persona/03-helene.persona.md) | Compare, planifie et documente seule sur ordinateur ; veut le montant net et des parcours qui gèrent les cas non standard | [Parcours d'Hélène](./03-customer-journey-map/03-helene.cjm.md) |
+
+Les proto-personas restent dans [02-persona/proto/](./02-persona/proto/) : Léa, fusionnée dans Manon ; Karim, Stéphane et Isabelle, scindés.
+
+## Parcours cartographiés (état actuel)
+- **Souscrire sa première couverture** et **savoir ce qui restera à payer avant un soin** : [Manon](./03-customer-journey-map/01-manon.cjm.md)
+- **Faire estimer un devis coûteux** et **déclarer l'arrêt de son conjoint et suivre les versements** : [Sylvie](./03-customer-journey-map/02-sylvie.cjm.md)
+- **Choisir et souscrire une prévoyance** et **déclarer un arrêt et suivre les indemnités jusqu'à la reprise** : [Hélène](./03-customer-journey-map/03-helene.cjm.md)
 
 ## Décisions prises pendant l'exploration
 - Projet fictif : assureur inventé « Clarea Assurances », réalisme crédible, aucune donnée réelle.
@@ -84,14 +96,21 @@ Segments écartés pour cette version : salariés couverts par un contrat collec
 - Recherche en collecte simulée, complétée par une recherche documentaire.
 - Les livrables sont validés par l'utilisateur seul.
 
-## Hypothèses à valider
-Voir le [plan de recherche](./research/plan-de-recherche.md).
+## Hypothèses : statut après recherche (simulée)
+Détail et sources : [synthèse](./research/synthese.md#confrontation-aux-hypothèses) · Hypothèses d'origine : [plan de recherche](./research/plan-de-recherche.md).
+
+| Statut | Hypothèses |
+|---|---|
+| **Validées** | H1 (tableau illisible, choix au prix), H7 (perte de revenus sous-estimée), H10 (justificatifs inconnus), H11 (versements invisibles) |
+| **Nuancées** | H2 (coordonnées avant le prix), H3 (comparaison sur ordinateur), H4 (appel avant un soin), H8 (conseil d'un tiers), H9 (questionnaire de santé), H13 (avis) |
+| **Invalidées** | H5 (remboursements sur mobile), H6 (carte cherchée au comptoir), H12 (réticence à envoyer des pièces médicales) |
 
 ## Questions ouvertes
-- Les TNS souscrivent-ils leur prévoyance en ligne, ou faut-il prévoir une souscription assistée (H8) ?
+- Faut-il proposer une souscription assistée (rappel d'un conseiller) en plus du parcours en ligne, la majorité des TNS passant par un intermédiaire (H8 nuancée) ?
 - Quelle place donner à l'estimation du reste à charge : outil autonome, ou estimation liée à un devis de praticien ?
 - Dans quels cas la souscription en ligne n'est-elle pas possible (questionnaire de santé nécessitant une étude médicale) ?
 - Quelles pièces justificatives exiger pour un arrêt ou une invalidité, et qui y a accès dans l'organisation (médecin-conseil) ?
+- L'accès délégué à un proche ou à un bénéficiaire (besoin émergent) entre-t-il dans le périmètre de la première version ?
 
 ## Étapes suivantes
 Recherche utilisateur → synthèse (personas fondés, journey maps) → user stories → user flows → architecture de l'information → design system → prototypes
